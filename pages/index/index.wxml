@@ -9,19 +9,18 @@
             </cover-view> -->
             <!-- 遮罩 -->
 
-            <cover-view class="mask">
-                
-            </cover-view>
+            <!--<cover-view class="mask">-->
+                <!---->
+            <!--</cover-view>-->
             <!-- 边框 -->
-            <cover-view class="border" >
-                <cover-image catchtap="lightshow" src="{{light?'/images/light.png':'/images/light2.png'}}"   class="light ">
-                    
-                </cover-image>
-                <cover-image src="/images/border.png"   class=" border_s" ></cover-image>
-            </cover-view>
-            <cover-view class="mask">
-                
-            </cover-view>
+            <!--<cover-view class="border" >-->
+                <!--<cover-image catchtap="lightshow" src="{{light?'/images/light.png':'/images/light2.png'}}"   class="light ">-->
+                <!--</cover-image>-->
+                <!--<cover-image src="/images/border.png"   class=" border_s" ></cover-image>-->
+            <!--</cover-view>-->
+            <!--<cover-view class="mask">-->
+                <!---->
+            <!--</cover-view>-->
             
             
         </cover-view>

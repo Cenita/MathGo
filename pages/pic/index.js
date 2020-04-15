@@ -37,19 +37,12 @@ Page({
                     imgHeight:allheight
                 })
         }
-    
-
-      
-   
-      const img = options.src
+      const img = options.src;
       this.cropper = this.selectComponent("#image-cropper");
       //开始裁剪
       this.setData({
           src:img
       });
-      wx.showLoading({
-          title: '加载中'
-      })
   },
   cropperload(e){
       console.log("cropper初始化完成");

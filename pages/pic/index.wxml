@@ -1,6 +1,6 @@
 <view class="box">
     <image-cropper id="image-cropper"
-  limit_move="true"
+  limit_move="false"
   width="{{width}}"
   height="{{height}}"
   imgSrc="{{src}}"
