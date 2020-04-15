@@ -3,12 +3,11 @@
 </view>
 <view class="main" wx:else>
     <view class="img">
-        <image src="{{imgsrc}}" style="height:{{height}}px"></image>
+        <image src="{{imgsrc}}" style="height:200px"></image>
     </view>
 
     <view class="result">
-        <image class="result_icon" src="/images/result.png"></image>
-        <text>识别结果</text>
+        <text style="padding-left: 20px;">识别结果</text>
     </view>
 
     
