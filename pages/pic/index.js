@@ -4,12 +4,10 @@ const mathModel = new MathModel()
 Page({
   data: {
       src:'',
-      width:400,//裁剪框初始宽度
+      width:200,//裁剪框初始宽度
       height: 200,//裁剪框初始高度
       imgWidth:400, // 图片宽
       imgHeight: 600, // 图片高
-      maxwidth:500,   // 裁剪最大宽度
-      maxheight:280,  // 裁剪最大高度
       picimg:'',
       array: ['微积分', '三角函数', '线性方程', '矩阵','分数表达式'],
       index:0,
@@ -48,15 +46,11 @@ Page({
       console.log("cropper初始化完成");
   },
   loadimage(e){
-      
         // 重置图片角度、缩放、位置
     this.cropper.imgReset();
     wx.hideLoading();
-    
-    
   },
   clickcut(e) {
-
         var tempImagePaths = e.detail.url
         wx.compressImage({
             src: tempImagePaths, // 图片路径
@@ -71,8 +65,6 @@ Page({
         exprs.push(expr)
         //将添加的元素存储到本地
         wx.setStorageSync("storage", exprs)
-    
-
         wx.navigateTo({
             url: `/pages/result/index?src=${tempImagePaths}`+`&width=${this.data.width}`+`&height=${this.data.height}`
         })

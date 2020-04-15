@@ -1,8 +1,6 @@
 <view class="container">
     <camera device-position="back" class="camera" flash="{{flash}}" binderror="error" >
-        
         <cover-view class="box">
-            
             <!-- 筛选类型 -->
             <!-- <cover-view class="type" bindtap="openmask">
                     <cover-image src="/images/tuku.png" ></cover-image>
@@ -40,9 +38,6 @@
                     <cover-image src="/images/cancel.png"  ></cover-image>
                 </cover-view>
         </cover-view>
-        
-        
-
     </camera>
     
 </view>
