@@ -1,0 +1,39 @@
+<view class="container"  catchtap='hindKeyboard'>
+    <view class="math_c">
+          <towxml  nodes="{{article}}"  />
+    </view>
+    <!-- <view class="editbox">
+        <view class="edit" wx:for="{{string}}" wx:key="index" wx:for-index="index">
+          <image class="math_img"  src="{{img[index]}}"></image>
+            <view class="right">
+                  <view class="input_box" wx:for="{{item.content}}" wx:key="index" wx:for-index="detailIndex" >
+                    <view catchtap="showKeyboard" data-groupindex="{{index}}" data-index="{{detailIndex}}">
+                          <text> {{item.value}}</text>
+                          <view  class="className"></view>
+                    </view>
+                </view>
+            </view>
+          </view>
+    </view> -->
+
+
+    <view class='keyboard {{keyShow&&"hind_box"}}'>
+        <view class='complete'>完成</view>
+        <view class='key_box'>
+            <text class='keys {{index%3==0&&"border0"}} {{(index==9||index==11)&&"bg_color"}}' wx:for='{{KeyboardKeys}}' wx:key='this' catchtap='keyTap' data-keys='{{item}}'>{{item}}</text>
+        </view>
+    </view>
+
+
+    
+    <v-edit />
+        
+    
+
+
+
+    <view class="ok" bindtap="ok"  >
+        <text>确认</text>
+    </view>
+</view>
+

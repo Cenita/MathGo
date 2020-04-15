@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "towxml": "/towxml/towxml"
+  },
+  "navigationBarTitleText": "识别结果"
+}

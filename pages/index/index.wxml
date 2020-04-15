@@ -1,0 +1,64 @@
+<view class="container">
+    <camera device-position="back" class="camera" flash="{{flash}}" binderror="error" >
+        
+        <cover-view class="box">
+            
+            <!-- 筛选类型 -->
+            <!-- <cover-view class="type" bindtap="openmask">
+                    <cover-image src="/images/tuku.png" ></cover-image>
+            </cover-view> -->
+            <!-- 遮罩 -->
+
+            <cover-view class="mask">
+                
+            </cover-view>
+            <!-- 边框 -->
+            <cover-view class="border" >
+                <cover-image catchtap="lightshow" src="{{light?'/images/light.png':'/images/light2.png'}}"   class="light ">
+                    
+                </cover-image>
+                <cover-image src="/images/border.png"   class=" border_s" ></cover-image>
+            </cover-view>
+            <cover-view class="mask">
+                
+            </cover-view>
+            
+            
+        </cover-view>
+        <cover-view class="bottom">
+                <cover-view class="pic" bindtap="openmask">
+                    <cover-image src="/images/tuku.png"   ></cover-image>
+                </cover-view>
+                <cover-view class="btn" bindtap="takePhoto" >
+                    <cover-image  src="/images/bgc.png" class="bgc">
+                        
+                    </cover-image>
+                    <cover-image  src="/images/photo.png" class="photo " >
+                            
+                    </cover-image> 
+                </cover-view>
+                <cover-view class="cancel"  bindtap="backhome">
+                    <cover-image src="/images/cancel.png"  ></cover-image>
+                </cover-view>
+        </cover-view>
+        
+        
+
+    </camera>
+    
+</view>
+
+<cover-view wx:if="{{show}}" class="ok" bindtap="closemask"  >
+    <cover-mask bindactiontap="imgBtn" actions="{{groups}}" />
+</cover-view>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<view class="mask" wx:if="{{mask}}">
+    
+</view>
+<view class="main" wx:else>
+    <view class="img">
+        <image src="{{imgsrc}}" style="height:{{height}}px"></image>
+    </view>
+
+    <view class="result">
+        <image class="result_icon" src="/images/result.png"></image>
+        <text>识别结果</text>
+    </view>
+
+    
+
+    <view class="math_c">
+        <towxml  nodes="{{article}}"  />
+    </view>
+
+    
+
+
+    <view class="again">
+      <view class="btn" bindtap="back">
+          <image  src="/images/fanhui.png"></image>
+          <text>重新识别</text>
+      </view>
+      <view class="edit" bindtap="edit">
+          <image  src="/images/edit.png"></image>
+          <text>编辑</text>
+      </view>
+    </view> 
+</view>

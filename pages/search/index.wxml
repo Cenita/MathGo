@@ -1,0 +1,23 @@
+<view class="container">
+    <scroll-view class="navbar" scroll-x="true" scroll-with-animation="true" >
+        <view wx:for="{{navlist}}" bindtap="changeTab" class='row {{index === activeIndex?"active":""}}' data-index="{{index}}">
+            <text>{{item}}</text>
+        </view>
+    </scroll-view>
+    <swiper class="swiper" current="{{activeIndex}}" bindchange="changeSwiper" style="height:{{winHeight}}px">
+        <swiper-item class="test query-{{index}}" wx:for="{{detail}}" wx:key="index" >
+            <view class="items" wx:for="{{item}}" wx:key="index">
+               <view class="box">
+                  <view class="sort">
+                        <text>{{item.type}}</text>
+                  </view>
+                  <image class="all_img" src="{{item.img}}"></image>
+               </view>
+            </view>
+        </swiper-item>
+    </swiper>
+
+    <view class="tip" >
+        已经没有啦
+    </view>
+</view>

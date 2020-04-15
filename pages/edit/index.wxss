@@ -1,0 +1,125 @@
+.editbox {
+  width: 90%;
+  margin: 20rpx auto;
+  background-color: #308bff;
+  border-radius: 20rpx;
+}
+.edit {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.right {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.input_box {
+  width: 200rpx;
+  height: 60rpx;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+}
+.input_box>view {
+  width: 100%;
+  height: 100%;
+}
+.math_img {
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ok {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+  background-color: #308bff;
+  text-align: center;
+}
+.ok text {
+  color: #fff;
+  line-height: 120rpx;
+}
+
+
+
+
+
+
+
+
+
+.className{ 
+  display: inline-block;
+  width: 5rpx;
+  height: 30rpx;
+  background: #666;
+  border-radius: 6rpx;
+  animation: twinkling 1s infinite ; 
+} 
+.animated{ 
+  animation-duration: 1s; 
+  animation-fill-mode: both 
+} 
+@-webkit-keyframes twinkling{ 
+  0%{ 
+    opacity: 0; 
+  } 
+  100%{ 
+    opacity: 1; 
+  } 
+} 
+
+.keyboard{
+  height: 0;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  transition:height 0.3s;
+}
+.hind_box{
+  height: 440rpx;
+}
+.complete{
+  background: #efefef;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: right;
+  padding:0 25rpx;
+  color: #0f0;
+}
+.key_box{
+  overflow: hidden;
+}
+.keys{
+  float: left;
+  width: 250rpx;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-left: 1px solid #eee;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+}
+.border0{
+  border-left: 0;
+}
+.bg_color{
+  background: #ccc;
+}
+
+
+

@@ -1,0 +1,142 @@
+.container {
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.container camera {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto ;
+}
+page {
+  width: 100%;
+  height: 100%;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  
+  
+}
+.btn {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10rpx;
+}
+.btn  .bgc {
+  width: 100%;
+  height: 100%;
+}
+.btn .photo {
+  width: 76rpx;
+  height: 76rpx;
+  position: absolute;
+  top: 26rpx;
+  left: 26rpx;
+  
+}
+
+.bottom {
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding:  10rpx 0;
+
+}
+.pic,.cancel  {
+  width: 70rpx;
+  height: 70rpx;
+  background-color: black;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 50rpx;
+}
+.pic {
+  margin-left: 50rpx;
+}
+.cancel {
+  margin-right: 50rpx;
+}
+.pic cover-image   {
+  width: 66%;
+  height: 66%;
+  margin:0 auto;
+  margin-top: 13rpx;
+}
+
+.cancel cover-image {
+  width: 30rpx;
+  height: 30rpx;
+  margin:0 auto;
+  margin-top: 20rpx;
+}
+.border {
+  position: relative;
+  width: 100%;
+  height: 33.3%;
+}
+.border .border_s {
+  width:100%;
+  height: 100%;
+}
+.light {
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 999;
+}
+.tip {
+  position: absolute;
+  top: 300rpx;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+.mask,.mask_2 {
+  width: 100%;
+  height: 33.3%;
+  background-color: #000;
+  opacity: .3;
+}
+.type{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  left: 50rpx;
+  top: 50rpx;
+  z-index: 99;
+}
+.ok {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.6);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+}
+
+
+
+
+
+
+
+
+

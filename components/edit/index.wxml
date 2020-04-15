@@ -1,0 +1,5 @@
+<view class="container">
+   <editor placeholder="输入">
+      <image src="/images/arr.png"></image>
+   </editor>
+</view> 

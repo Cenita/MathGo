@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "towxml": "/towxml/towxml",
+    "v-edit":"/components/edit/index"
+  },
+  "navigationBarTitleText": "编辑表达式"
+}

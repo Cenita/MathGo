@@ -1,0 +1,24 @@
+<cover-view class="box">
+    
+  <cover-view class="main">
+      <!-- <cover-view class="weui-actionsheet__title" catchtap="test">
+          <cover-view class="weui-actionsheet__title-text">{{title}}</cover-view>
+      </cover-view> -->
+
+      <cover-view
+        class="weui-actionsheet__cell"
+        wx:key="{{index}}" 
+        wx:for-index="index"
+        wx:for="{{actions}}"
+        data-index="{{index}}"
+        catchtap="indexTap"
+      >
+      {{item.text}} 
+      </cover-view>
+
+      <!-- 取消 -->
+      <cover-view class="weui-actionsheet__action" wx:if="{{true}}">
+        <cover-view class="weui-actionsheet__cell" data-type="close" id="iosActionsheetCancel" bindtap="closeActionSheet">{{cancelText}}</cover-view>
+      </cover-view>
+  </cover-view>
+</cover-view>   

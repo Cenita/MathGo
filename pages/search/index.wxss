@@ -1,0 +1,65 @@
+.container {
+  padding: 0 30rpx;
+  position: relative;
+}
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  white-space: nowrap;
+  padding: 30rpx 0rpx;
+  box-sizing: border-box;
+}
+.navbar .row  {
+  display: inline-block;
+  text-align: center;
+  margin-right: 72rpx;
+  box-sizing: border-box;
+  border-bottom: 6rpx solid transparent;
+}
+.navbar .active {
+  border-bottom: 6rpx solid #2875ff;
+  color: #2875ff;
+}
+.row text {
+  line-height: 80rpx;
+}
+swiper {
+  width: 100%;
+  height: 100%;
+}
+.items {
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
+.items text {
+  color: #333;
+}
+.box {
+  width: 96%;
+  margin:0 auto;
+  height: 300rpx;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.tip {
+  text-align: center;
+  padding: 20rpx 0;
+}
+.sort {
+  width: 100%;
+  height: 60rpx;
+  background-color: #fff;
+  
+}
+.sort text{
+  color: #333;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 40rpx;
+}
+.all_img{
+  width: 100%;
+  height: 240rpx;
+}

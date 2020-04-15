@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cover-mask":"/components/mask/index"
+  },
+  "navigationBarTitleText": "识别表达式"
+}

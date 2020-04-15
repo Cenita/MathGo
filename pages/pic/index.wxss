@@ -1,0 +1,37 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+.box {
+  margin-top: 200rpx;
+  height: 80%;
+  width: 100%;
+}
+.type {
+  border-top: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 80rpx;
+  z-index: 1000;
+}
+.type_c {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 220rpx;
+}
+.type_c text {
+  color: #333;
+  font-size: 34rpx;
+  letter-spacing: 5rpx;
+}
+.arr {
+  width: 26rpx;
+  height: 26rpx;
+  margin-left: 20rpx;
+}
