@@ -59,85 +59,30 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/test/index",
-					"pathName": "pages/test/index",
+					"name": "主页",
+					"pathName": "pages/first/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/test2/index",
-					"pathName": "pages/test2/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/aaa/index",
-					"pathName": "pages/aaa/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/test2/index",
-					"pathName": "pages/test2/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/aa/index",
-					"pathName": "pages/aa/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/jian/index",
-					"pathName": "pages/jian/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/result/index",
-					"pathName": "pages/result/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/search/index",
-					"pathName": "pages/search/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/pic/index",
-					"pathName": "pages/pic/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/index",
+					"name": "摄像机",
 					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/test/index",
-					"pathName": "pages/test/index",
+					"name": "裁剪",
+					"pathName": "pages/pic/index",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/edit/index",
-					"pathName": "pages/edit/index",
+					"id": 3,
+					"name": "结果",
+					"pathName": "pages/result/index",
+					"query": "",
 					"scene": null
 				}
 			]
