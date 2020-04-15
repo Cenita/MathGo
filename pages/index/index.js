@@ -101,19 +101,18 @@ Page({
       // 获取相框的宽高给裁剪页面
     var query = wx.createSelectorQuery();
     var that = this;
-    // query.select('.border_s').boundingClientRect(function (rect) {
-    //   that.setData({
-    //     borderwidth: rect.width,
-    //     borderheight:rect.height
-    //   })
-    // }).exec();
-    //
+    query.select('.border_s').boundingClientRect(function (rect) {
+      that.setData({
+        borderwidth: rect.width,
+        borderheight:rect.height
+      })
+    }).exec();
+
     query.select('.camera').boundingClientRect(function (rect) {
+     
       that.setData({
         allwidth: rect.width,
-        allheight:rect.height,
-          borderwidth:rect.width-50,
-          borderheight:"200px"
+        allheight:rect.height
       })
     }).exec();
 

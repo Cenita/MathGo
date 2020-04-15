@@ -62,7 +62,10 @@ Page({
       height:options.height,
       imgsrc:options.src
     })
-
+    
+    wx.showLoading({
+      title: '识别中',
+    })
     var that = this
     setTimeout(function () {
       wx.hideLoading()
