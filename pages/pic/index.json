@@ -3,5 +3,5 @@
     "image-cropper": "/components/image-cropper/index"
   },
   "disableScroll": true,
-  "navigationBarTitleText": "裁剪图片"
+  "navigationBarTitleText": "选择表达式"
 }
