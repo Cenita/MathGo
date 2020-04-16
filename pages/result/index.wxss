@@ -61,6 +61,7 @@ page {
 }
 .result text {
   font-size: 30rpx;
+  font-weight: 800;
 }
 .math_c{
   font-size: 50px;
