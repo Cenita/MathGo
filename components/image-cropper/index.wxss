@@ -4,20 +4,20 @@
   top:0;
   left:0;
   width:100vw;
-  height:100vh;
+  height:80vh;
   z-index: 1;
 }
 .main{
   position: absolute;
   width:100vw;
-  height:100vh;
+  height:80vh;
   overflow: hidden;
 }
 .content{
   z-index: 9;
   position: absolute;
   width:100vw;
-  height:100vh;
+  height:80vh;
   display: flex;
   flex-direction:column;
   pointer-events:none;
@@ -121,7 +121,14 @@
   left:0.5px;
   bottom:-1px;
 }
-
+.selectView{
+  background: white;
+  width: 100%;
+  height: 20vh;
+  z-index: 98;
+  position: absolute;
+  bottom: 0px;
+}
 /* 按钮 */
 .btn {
   width: 130rpx;
@@ -130,8 +137,9 @@
   text-align: center;
   overflow: hidden;
   position: absolute;
-  left: 40%;
-  bottom: 20rpx;
+  margin-left: -65rpx;
+  left: 50%;
+  bottom: 40rpx;
   z-index: 99;
 }
 .btn  .bgc {
@@ -144,4 +152,12 @@
   position: absolute;
   top: 26rpx;
   left: 26rpx;
+}
+.close{
+  color: #b1b1b1;
+  font-size: 60rpx;
+  position: absolute;
+  bottom: 75rpx;
+  margin-left: -65rpx;
+  left: 20%;
 }

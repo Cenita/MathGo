@@ -22,9 +22,22 @@
     </view>
     <canvas canvas-id='image-cropper' disable-scroll="true" style="width:{{_canvas_width * export_scale}}px;height:{{_canvas_height * export_scale}}px;left:{{canvas_left}}px;top:{{canvas_top}}px" class='image-cropper-canvas'></canvas>
   </view>
-<cover-view class="btn"   bindtap="_click" >
-        <cover-image  src="/images/bgc.png" class="bgc">
-        </cover-image>
-        <cover-image  src="/images/dui.png" class="photo" >
-        </cover-image> 
-</cover-view>
+ <view class="selectView">
+     <van-tabs style="color: #62aad3" color="#62aad3" swipeable border="false" active="fore">
+         <van-tab disabled title=""></van-tab>
+         <van-tab disabled title=""></van-tab>
+         <van-tab name="fore" title="四则运算"></van-tab>
+         <van-tab name="wei" title="微积分"></van-tab>
+         <van-tab name="qiu" title="求导运算"></van-tab>
+         <van-tab name="ju" title="矩阵运算"></van-tab>
+         <van-tab disabled title=""></van-tab>
+         <van-tab disabled title=""></van-tab>
+     </van-tabs>
+     <van-icon bindtap="closeClick" class="close" name="cross" />
+     <cover-view class="btn"   bindtap="_click" >
+         <cover-image  src="/images/bgc.png" class="bgc">
+         </cover-image>
+         <cover-image  src="/images/dui.png" class="photo" >
+         </cover-image>
+     </cover-view>
+ </view>

@@ -10,15 +10,17 @@
   img_height="{{imgHeight}}"
   bindload="cropperload"
   bindimageload="loadimage"
-  bindtapcut="clickcut">
+  bindtapcut="clickcut"
+  bindclose="returnToCamera"
+  >
   </image-cropper>
 </view>
 
-<view class="type"> 
-    <picker class="type_c" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-        <text>识别类型: {{array[index]}}</text>
-        <image class="arr" src="/images/arr.png"></image>
-    </picker>
-</view>
+<!--<view class="type"> -->
+    <!--<picker class="type_c" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">-->
+        <!--<text>识别类型: {{array[index]}}</text>-->
+        <!--<image class="arr" src="/images/arr.png"></image>-->
+    <!--</picker>-->
+<!--</view>-->
 
 

@@ -162,6 +162,7 @@ Component({
     INIT_IMGHEIGHT: 0, //图片设置尺寸,此值不变（记录最初设定的尺寸）
     TIME_BG: null,//背景变暗延时函数
     TIME_CUT_CENTER:null,
+    timeList:["asd","asdasd"],
     _touch_img_relative: [{
       x: 0,
       y: 0
@@ -401,8 +402,8 @@ Component({
       let cut_left = (this.data.info.windowWidth - this.data.width) * 0.5;
       //顺序不能变
       this.setData({
-        _img_top: this.data._img_top - this.data.cut_top + cut_top,
-        cut_top: cut_top, //截取的框上边距
+        _img_top: this.data._img_top - this.data.cut_top + cut_top*0.8,
+        cut_top: cut_top*0.8, //截取的框上边距
         _img_left: this.data._img_left - this.data.cut_left + cut_left,
         cut_left: cut_left, //截取的框左边距
       });
@@ -411,7 +412,7 @@ Component({
       let cut_top = (this.data.info.windowHeight - this.data.height) * 0.5;
       let cut_left = (this.data.info.windowWidth - this.data.width) * 0.5;
       this.setData({
-        cut_top: cut_top, //截取的框上边距
+        cut_top: cut_top*0.8, //截取的框上边距
         cut_left: cut_left, //截取的框左边距
       });
     },
@@ -547,6 +548,29 @@ Component({
         this.data.INIT_IMGHEIGHT = this.data.img_height = this.data.info.windowHeight / 100 * height;
       }
     },
+
+      initTimeList:function(itemNum){
+          // 基础判断
+          if (itemNum <= 0){
+              console.log(' Error From initTimeList()：所需时段数不可小于等于零')
+              return []
+          }
+
+          // 当前时段
+          var nowTime = new Date().getHours()
+
+          // 组装数组
+          var timeList = []
+          for (var t = 0; t < itemNum ; t++){
+              t > 9 ? (timeList.push({ 'index': t, 'time': t + ':00', 'hint': (t == nowTime ? '抢购进行中' : (t > nowTime ? '即将开始' : '已开抢')) })) : (timeList.push({ 'index': t, 'time': '0' + t + ":00", 'hint': (t == nowTime ? '抢购进行中' : (t > nowTime ? '即将开始' : '已开抢')) }))
+          }
+          return timeList
+      }
+      ,
+      clickItem:function(item){
+          // 列表点击事件
+          console.log(item.currentTarget.dataset.item.index)
+      },
     /**
      * 检测剪裁框位置是否在允许的范围内(屏幕内)
      */
@@ -864,7 +888,7 @@ Component({
             }, this)
           
         });
-      
+
       
       // this._draw(()=>{
       //   let x = event.detail ? event.detail.x : event.touches[0].clientX;
@@ -889,6 +913,9 @@ Component({
       //     }, this)
       //   }
       // });
+    },
+    closeClick(){
+        this.triggerEvent('close');
     },
     //渲染
     _draw(callback) {

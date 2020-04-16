@@ -66,5 +66,10 @@ Page({
         wx.navigateTo({
             url: `/pages/result/index?src=${tempImagePaths}`+`&width=${this.data.width}`+`&height=${this.data.height}`
         })
-  }
+  },
+    returnToCamera(e){
+        wx.navigateTo({
+            url: `/pages/index/index`
+        })
+    }
 })
