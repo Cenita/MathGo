@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "towxml": "/towxml/towxml"
+    "towxml": "/towxml/towxml",
+    "van-divider": "@vant/weapp/divider/index"
   },
   "navigationBarTitleText": "识别结果"
 }
