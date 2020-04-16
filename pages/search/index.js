@@ -9,7 +9,23 @@ Page({
     activeIndex:0,
     items:[],
     detail:[
-      [],[],[],[],[],[]
+      [
+        {type: "微积分", img: "/images/search/int.png"},
+        {type: "微积分", img: "/images/search/int2.png"},
+        {type: "线性方程", img: "/images/search/fx.png"},
+        {type: "矩阵", img: "/images/search/jz.png"},
+        {type: "矩阵", img: "/images/search/jz2.png"},
+      ],[
+        {type: "微积分", img: "/images/search/int.png"},
+        {type: "微积分", img: "/images/search/int2.png"},
+      ],[
+
+      ],[
+        {type: "线性方程", img: "/images/search/fx.png"},
+      ],[
+        {type: "矩阵", img: "/images/search/jz.png"},
+        {type: "矩阵", img: "/images/search/jz2.png"},
+      ],[]
     ],
     itemsHeight:0,
   },
@@ -32,73 +48,70 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var exprs = wx.getStorageSync("storage") || []
+    // var exprs = wx.getStorageSync("storage") || []
 
-    this.setData({
-      items: exprs
-    })
+    // this.setData({
+    //   items: exprs
+    // })
+    // console.log(exprs)
+    // let www = this.data.items
     
-    
-    
+    // for (var i of www)
+    // {
+    //   // 全部
+    //   let array = this.data.detail[0]
+    //   array.unshift(i)
+    //   this.setData({
+    //     detail: this.data.detail
+    //   })
 
-    let www = this.data.items
-    
-    for (var i of www)
-    {
-      // 全部
-      let array = this.data.detail[0]
-      array.unshift(i)
-      this.setData({
-        detail: this.data.detail
-      })
-
-      if (i.type == this.data.navlist[1])
-      { 
-        // 微积分
-        let array  = this.data.detail[1]
-        array.unshift(i)
-        this.setData({
-          detail: this.data.detail
-        })
-      } else if (i.type == this.data.navlist[2])
-      {
-        let array = this.data.detail[2]
-        array.unshift(i)
-        this.setData({
-          detail: this.data.detail
-        })
+    //   if (i.type == this.data.navlist[1])
+    //   { 
+    //     // 微积分
+    //     let array  = this.data.detail[1]
+    //     array.unshift(i)
+    //     this.setData({
+    //       detail: this.data.detail
+    //     })
+    //   } else if (i.type == this.data.navlist[2])
+    //   {
+    //     let array = this.data.detail[2]
+    //     array.unshift(i)
+    //     this.setData({
+    //       detail: this.data.detail
+    //     })
         
         
-      } else if (i.type == this.data.navlist[3])
-      {
-        let array = this.data.detail[3]
-        array.unshift(i)
-        this.setData({
-          detail: this.data.detail
-        })
-      } else if (i.type == this.data.navlist[4]) {
-        let array = this.data.detail[4]
-        array.unshift(i)
-        this.setData({
-          detail: this.data.detail
-        })
-      } else if (i.type == this.data.navlist[5]) {
-        let array = this.data.detail[5]
-        array.unshift(i)
-        this.setData({
-          detail: this.data.detail
-        })
-      } else if (i.type == this.data.navlist[6]) {
-        let array = this.data.detail[6]
-        array.unshift(i)
-        this.setData({
-          detail: this.data.detail
-        })
-      }
-      else {
-        console.log(i)
-      }
-    }
+    //   } else if (i.type == this.data.navlist[3])
+    //   {
+    //     let array = this.data.detail[3]
+    //     array.unshift(i)
+    //     this.setData({
+    //       detail: this.data.detail
+    //     })
+    //   } else if (i.type == this.data.navlist[4]) {
+    //     let array = this.data.detail[4]
+    //     array.unshift(i)
+    //     this.setData({
+    //       detail: this.data.detail
+    //     })
+    //   } else if (i.type == this.data.navlist[5]) {
+    //     let array = this.data.detail[5]
+    //     array.unshift(i)
+    //     this.setData({
+    //       detail: this.data.detail
+    //     })
+    //   } else if (i.type == this.data.navlist[6]) {
+    //     let array = this.data.detail[6]
+    //     array.unshift(i)
+    //     this.setData({
+    //       detail: this.data.detail
+    //     })
+    //   }
+    //   else {
+    //     console.log(i)
+    //   }
+    // }
  
     var query = wx.createSelectorQuery();
     var that = this;
