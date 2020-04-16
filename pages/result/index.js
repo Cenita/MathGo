@@ -11,7 +11,8 @@ Page({
       mask:false,
       width:0,
       height:0,
-      imgsrc:'',
+      imgsrc:'../../images/bgc.png',
+      result_text:{}
   },
   edit(){
       wx.navigateTo({
@@ -37,7 +38,7 @@ Page({
     ]
     
     
-    let str = `$\\int_{${arr[0]}}^${arr[1]}\\frac{${arr[2]}}{${arr[3]}+{${arr[5]}}}${arr[6]}=3\\ln3$`
+    let str = `$\\frac{5}{3} + \\frac{6}{5} =$`
     // this.setData({
     //   string:arr
     // })
@@ -50,11 +51,24 @@ Page({
         }
       }
     });
-
+    let str1 = `$\\frac{43}{15}$`
+    // this.setData({
+    //   string:arr
+    // })
+    let result1 = app.towxml(str1, 'markdown', {
+        // base: 'https://xxx.com',				// 相对资源的base路径
+        // theme: 'dark',					// 主题，默认`light`
+        events: {					// 为元素绑定的事件方法
+            tap: (e) => {
+                console.log('tap', e);
+            }
+        }
+    });
     // 更新解析数据
     this.setData({
-      article: result,
-      isLoading: false
+        article: result,
+        isLoading: false,
+        result_text:result1
     });
 
     this.setData({

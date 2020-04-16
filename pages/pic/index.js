@@ -4,7 +4,7 @@ const mathModel = new MathModel()
 Page({
   data: {
       src:'',
-      width:200,//裁剪框初始宽度
+      width:400,//裁剪框初始宽度
       height: 200,//裁剪框初始高度
       imgWidth:400, // 图片宽
       imgHeight: 600, // 图片高
@@ -24,13 +24,11 @@ Page({
             console.log("我是空的")
         }
         else {
-                var borderwdith =  options.width 
-                var borderheight = options.height
                 var allwidth  = options.allwidth 
                 var allheight = options.allheight
                 this.setData({
-                    width:borderwdith,
-                    height:borderheight,
+                    width:allwidth,
+                    allheight:allheight*0.2,
                     imgWidth:allwidth,
                     imgHeight:allheight
                 })

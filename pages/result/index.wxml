@@ -2,22 +2,19 @@
     
 </view>
 <view class="main" wx:else>
-    <view class="img">
+    <view class="img" style="margin-bottom: 50rpx">
         <image src="{{imgsrc}}" style="height:200px"></image>
     </view>
 
-    <view class="result">
-        <text style="padding-left: 20px;">识别结果</text>
-    </view>
-
-    
-
+    <van-divider  custom-style="margin:0px;" contentPosition="left">返回结果</van-divider>
     <view class="math_c">
         <towxml nodes="{{article}}"  />
     </view>
-    <van-divider />
-    
 
+    <van-divider  custom-style="margin:0px;" contentPosition="left">算式答案</van-divider>
+    <view class="math_c">
+        <towxml nodes="{{result_text}}"  />
+    </view>
 
     <view class="again">
       <view class="btn" bindtap="back">

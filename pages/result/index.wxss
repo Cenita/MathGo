@@ -65,4 +65,5 @@ page {
 }
 .math_c{
   font-size: 50px;
+  margin-bottom: 100rpx;
 }
