@@ -10,21 +10,21 @@ Page({
     items:[],
     detail:[
       [
-        {type: "微积分", img: "/images/search/int.png"},
-        {type: "微积分", img: "/images/search/int2.png"},
-        {type: "线性方程", img: "/images/search/fx.png"},
-        {type: "矩阵", img: "/images/search/jz.png"},
-        {type: "矩阵", img: "/images/search/jz2.png"},
+        {type: "微积分", img: "/images/search/int.jpg"},
+        {type: "微积分", img: "/images/search/int2.jpg"},
+        {type: "线性方程", img: "/images/search/fx.jpg"},
+        {type: "矩阵", img: "/images/search/jz.jpg"},
+        {type: "矩阵", img: "/images/search/jz2.jpg"},
       ],[
-        {type: "微积分", img: "/images/search/int.png"},
-        {type: "微积分", img: "/images/search/int2.png"},
+        {type: "微积分", img: "/images/search/int.jpg"},
+        {type: "微积分", img: "/images/search/int2.jpg"},
       ],[
 
       ],[
-        {type: "线性方程", img: "/images/search/fx.png"},
+        {type: "线性方程", img: "/images/search/fx.jpg"},
       ],[
-        {type: "矩阵", img: "/images/search/jz.png"},
-        {type: "矩阵", img: "/images/search/jz2.png"},
+        {type: "矩阵", img: "/images/search/jz.jpg"},
+        {type: "矩阵", img: "/images/search/jz2.jpg"},
       ],[]
     ],
     itemsHeight:0,
