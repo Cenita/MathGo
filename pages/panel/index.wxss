@@ -1,0 +1,59 @@
+page {
+  background: #f0f0f0;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+}
+.btm {
+  width: 100%;
+  height: 20%;
+}
+.canvas-container {
+  background: #fff;
+  width: 100%;
+  height: 80%;
+}
+.pen image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.tool-container {
+  width: 100%;
+  height: 100rpx;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.tool-container>view {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tool-container image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.tool-container text {
+    font-size: 26rpx;
+    color: #333;
+}
+.ok {
+  width: 650rpx;
+  height: 80rpx;
+  background: #308bff;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  line-height: 80rpx;
+  text-align: center;
+  align-self: center;
+  margin: 20rpx auto;
+}
+.active {
+  background-color: #fff;
+}

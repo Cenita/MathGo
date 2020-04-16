@@ -1,0 +1,32 @@
+<view class='container'>
+  <canvas class="canvas-container"
+   canvas-id="myCanvas"
+   disable-scroll="true"
+   bindtouchstart="touchStart"
+   bindtouchmove="touchMove"
+   bindtouchend="touchEnd"
+   bindtouchcancel="touchEnd">
+  </canvas>
+  <view class="btm">
+    <view class='tool-container'>
+          <view class='pen {{0 === activeIndex?"active":""}}' catchtap='selectPenWidthTap' data-index="0">
+            <image src="/images/panel/bi.png"></image>
+            <text>画笔</text>
+          </view>
+          <view class='back {{1 === activeIndex?"active":""}}' catchtap='revokeCanvas'  data-index="1">
+              <image src='/images/panel/ic_back.png' mode='aspectFill'></image>
+              <text >撤销</text>
+          </view>
+          <view class='tool-clear {{2 === activeIndex?"active":""}}'  catchtap='clearTap' data-index="2">
+            <image src='/images/panel/ic_clear.png' mode='aspectFill'></image>
+            <text>橡皮</text>
+          </view>
+          <view class='qingchu {{3 === activeIndex?"active":""}}' data-index="3" catchtap='deleteTap'>
+              <image src='/images/panel/ic_delete.png' mode='aspectFill' catchtap='deleteTap'></image>
+              <text >清除</text>
+          </view>
+  </view>
+  <view class='ok' catchtap='confirmTap'>完成</view>
+  </view>
+</view>
+
