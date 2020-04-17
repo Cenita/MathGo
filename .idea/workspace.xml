@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9439294a-cbbd-4b9f-bd27-fdc9a15eb4c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.en.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/math.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/math.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/pic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pic/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/result/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/result/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/result/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/result/index.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/http.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,7 +33,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="36" />
+          <entry key="js" value="42" />
           <entry key="json" value="23" />
           <entry key="png" value="4" />
           <entry key="wxml" value="27" />
@@ -49,14 +45,14 @@
           <entry key="HTML" value="26" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="23" />
-          <entry key="JavaScript" value="36" />
+          <entry key="JavaScript" value="42" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Wxss" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1054" />
+          <entry key="js" value="1427" />
           <entry key="json" value="63" />
           <entry key="wxml" value="473" />
           <entry key="wxss" value="298" />
@@ -66,7 +62,7 @@
         <counts>
           <entry key="HTML" value="473" />
           <entry key="JSON" value="63" />
-          <entry key="JavaScript" value="1054" />
+          <entry key="JavaScript" value="1427" />
           <entry key="Wxss" value="298" />
         </counts>
       </usages-collector>
@@ -75,31 +71,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
+        <entry file="file://$PROJECT_DIR$/utils/upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1414">
-              <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/pic/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="595">
+              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/result/index.js">
+        <entry file="file://$PROJECT_DIR$/models/math.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
-              <folding>
-                <element signature="e#25#73#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -108,10 +101,22 @@
         <entry file="file://$PROJECT_DIR$/pages/result/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#view#0;n#view#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#image#0;n#view#0;n#view#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/result/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="78" column="17" lean-forward="true" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+              <folding>
+                <element signature="e#25#72#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,6 +152,7 @@
       <find>loadimage</find>
       <find>closeClick</find>
       <find>bindtapcut</find>
+      <find>MathModel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,12 +175,13 @@
         <option value="$PROJECT_DIR$/components/image-cropper/index.wxss" />
         <option value="$PROJECT_DIR$/pages/search/index.js" />
         <option value="$PROJECT_DIR$/utils/http.js" />
-        <option value="$PROJECT_DIR$/config.js" />
-        <option value="$PROJECT_DIR$/models/math.js" />
-        <option value="$PROJECT_DIR$/pages/pic/index.js" />
         <option value="$PROJECT_DIR$/pages/pic/index.wxml" />
         <option value="$PROJECT_DIR$/pages/result/index.wxml" />
+        <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/pages/pic/index.js" />
         <option value="$PROJECT_DIR$/pages/result/index.js" />
+        <option value="$PROJECT_DIR$/utils/upload.js" />
+        <option value="$PROJECT_DIR$/models/math.js" />
       </list>
     </option>
   </component>
@@ -287,6 +294,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\studyBook\python\project\拍题计算小程序\wechat_applet\utils" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -313,12 +325,12 @@
       <workItem from="1586970924791" duration="4507000" />
       <workItem from="1587022266120" duration="1705000" />
       <workItem from="1587024132024" duration="8369000" />
-      <workItem from="1587098740721" duration="5519000" />
+      <workItem from="1587098740721" duration="7020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20348000" />
+    <option name="totallyTimeSpent" value="21849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -350,9 +362,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/arr.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -527,13 +536,6 @@
     <entry file="file://$PROJECT_DIR$/pages/search/index.wxss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/util.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -561,20 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="910">
-          <caret line="32" column="6" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/math.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -582,24 +570,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
+    <entry file="file://$PROJECT_DIR$/utils/http.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1414">
-          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        <state relative-caret-position="280">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/pic/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/result/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#view#0;n#view#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#image#0;n#view#0;n#view#1;n#!!top" expanded="true" />
@@ -609,11 +611,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/result/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+        <state relative-caret-position="315">
+          <caret line="78" column="17" lean-forward="true" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
           <folding>
-            <element signature="e#25#73#0" expanded="true" />
+            <element signature="e#25#72#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/math.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>

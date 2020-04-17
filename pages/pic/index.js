@@ -1,6 +1,4 @@
 import { MathModel } from '../../models/math.js'
-const mathModel = new MathModel()
-
 Page({
   data: {
       src:'',

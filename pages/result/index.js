@@ -1,6 +1,7 @@
 // pages/result/index.js
-import { MathModel } from '../../models/math.js'
+import { fileUpload } from '../../models/math.js'
 import {config} from "../../config";
+const file = new fileUpload();
 const app = getApp();
 Page({
   /**
@@ -74,28 +75,38 @@ Page({
         mask:false
       })
     }, 2000)
-      console.log(that.data.imgsrc)
-    wx.uploadFile(
-        {
-            url:"http://192.168.1.185:12005/infer",
-            filePath:that.data.imgsrc,
-            name:"input",
-            success:function (res) {
-                let data = JSON.parse(res.data)
-                console.log(data)
-                console.log(data.latex)
-                let math = app.towxml("$"+data.latex+"$", 'markdown');
-                let result = app.towxml("$"+data.result+"$", 'markdown');
-                that.setData({
-                    math: math,
-                    result:result
-                })
-            },
-            fail:function (res) {
-                console.log(res)
-            }
-        }
-    )
+    console.log(that.data.imgsrc)
+    file.inferImage(that.data.imgsrc).then(res=>{
+        let math = app.towxml("$"+res.latex+"$", 'markdown');
+        let result = app.towxml("$"+res.result+"$", 'markdown');
+        that.setData({
+            math: math,
+            result:result
+        })
+    }).catch(res=>{
+        console.log(res)
+    })
+    // wx.uploadFile(
+    //     {
+    //         url:"http://192.168.1.185:12005/infer",
+    //         filePath:that.data.imgsrc,
+    //         name:"input",
+    //         success:function (res) {
+    //             let data = JSON.parse(res.data)
+    //             console.log(data)
+    //             console.log(data.latex)
+    //             let math = app.towxml("$"+data.latex+"$", 'markdown');
+    //             let result = app.towxml("$"+data.result+"$", 'markdown');
+    //             that.setData({
+    //                 math: math,
+    //                 result:result
+    //             })
+    //         },
+    //         fail:function (res) {
+    //             console.log(res)
+    //         }
+    //     }
+    // )
   },
 
   /**
