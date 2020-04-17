@@ -6,7 +6,8 @@
     "pages/pic/index",
     "pages/result/index",
     "pages/search/index",
-    "pages/edit/index"
+    "pages/edit/index",
+    "pages/panel/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

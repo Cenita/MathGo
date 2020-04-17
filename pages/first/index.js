@@ -27,6 +27,11 @@ Page({
       url: '/pages/index/index',
     })
   },
+  goPanel(){
+    wx.navigateTo({
+      url: '/pages/panel/index',
+    })
+  },
   util: function (currentStatu) {
     /* 动画部分 */
     // 第1步：创建动画实例 

@@ -90,6 +90,13 @@
 					"id": -1,
 					"name": "搜索",
 					"pathName": "pages/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "画板",
+					"pathName": "pages/panel/index",
 					"scene": null
 				}
 			]
