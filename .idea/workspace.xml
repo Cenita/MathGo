@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9439294a-cbbd-4b9f-bd27-fdc9a15eb4c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/image-cropper/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/image-cropper/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/image-cropper/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/image-cropper/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/panel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/panel/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/result/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/result/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/result/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/result/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/result/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/result/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/result/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/result/index.wxss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +29,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="61" />
+          <entry key="js" value="62" />
           <entry key="json" value="34" />
           <entry key="png" value="4" />
           <entry key="wxml" value="41" />
@@ -46,14 +41,14 @@
           <entry key="HTML" value="40" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="34" />
-          <entry key="JavaScript" value="61" />
+          <entry key="JavaScript" value="62" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Wxss" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2124" />
+          <entry key="js" value="2165" />
           <entry key="json" value="89" />
           <entry key="wxml" value="895" />
           <entry key="wxss" value="642" />
@@ -63,7 +58,7 @@
         <counts>
           <entry key="HTML" value="895" />
           <entry key="JSON" value="89" />
-          <entry key="JavaScript" value="2124" />
+          <entry key="JavaScript" value="2165" />
           <entry key="Wxss" value="642" />
         </counts>
       </usages-collector>
@@ -79,6 +74,15 @@
               <folding>
                 <element signature="n#style#0;n#van-tabs#0;n#view#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="139" column="74" selection-start-line="139" selection-start-column="68" selection-end-line="139" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -101,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/result/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="92" column="56" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
+            <state relative-caret-position="420">
+              <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
               <folding>
                 <element signature="e#25#74#0" expanded="true" />
               </folding>
@@ -113,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/result/index.wxss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
@@ -220,8 +224,9 @@
         <option value="$PROJECT_DIR$/components/image-cropper/index.js" />
         <option value="$PROJECT_DIR$/pages/result/index.wxml" />
         <option value="$PROJECT_DIR$/components/image-cropper/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/result/index.js" />
         <option value="$PROJECT_DIR$/pages/result/index.wxss" />
+        <option value="$PROJECT_DIR$/pages/panel/index.js" />
+        <option value="$PROJECT_DIR$/pages/result/index.js" />
       </list>
     </option>
   </component>
@@ -307,6 +312,12 @@
               <item name="wechat_applet" type="b2602c69:ProjectViewProjectNode" />
               <item name="wechat_applet" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechat_applet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechat_applet" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="pic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -377,12 +388,12 @@
       <workItem from="1586970924791" duration="4507000" />
       <workItem from="1587022266120" duration="1705000" />
       <workItem from="1587024132024" duration="8369000" />
-      <workItem from="1587098740721" duration="19252000" />
+      <workItem from="1587098740721" duration="19724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34081000" />
+    <option name="totallyTimeSpent" value="34553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -414,9 +425,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/towxml/latex/latex.wxss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/towxml/parse/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -634,10 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
+    <entry file="file://$PROJECT_DIR$/pages/result/index.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="595">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -652,6 +660,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/image-cropper/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -659,6 +674,13 @@
           <folding>
             <element signature="n#style#0;n#van-tabs#0;n#view#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="139" column="74" selection-start-line="139" selection-start-column="68" selection-end-line="139" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -678,18 +700,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/result/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="92" column="56" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
+        <state relative-caret-position="420">
+          <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
           <folding>
             <element signature="e#25#74#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/result/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
         </state>
       </provider>
     </entry>

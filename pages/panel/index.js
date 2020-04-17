@@ -137,7 +137,7 @@ Page({
       success: function (res) {
         var tempImagePaths = res.tempFilePath;
         wx.navigateTo({
-          url: `/pages/result/index?src=${tempImagePaths}`
+          url: `/pages/result/index?src=${tempImagePaths}&operation=pannel`
         })
       }
     })
