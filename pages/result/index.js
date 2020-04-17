@@ -1,18 +1,19 @@
 // pages/result/index.js
+import { MathModel } from '../../models/math.js'
+import {config} from "../../config";
 const app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
       isLoading: true,					// 判断是否尚在加载中
-      article: {},						// 内容数据
+      math: {},						// 内容数据
       mask:false,
       width:0,
       height:0,
       imgsrc:'../../images/bgc.png',
-      result_text:{}
+      result:{}
   },
   edit(){
       wx.navigateTo({
@@ -39,12 +40,7 @@ Page({
     
     
     let str = `$\\frac{5}{3} + \\frac{6}{5} =$`
-    // this.setData({
-    //   string:arr
-    // })
     let result = app.towxml(str, 'markdown', {
-      // base: 'https://xxx.com',				// 相对资源的base路径
-      // theme: 'dark',					// 主题，默认`light`
       events: {					// 为元素绑定的事件方法
         tap: (e) => {
           console.log('tap', e);
@@ -52,12 +48,7 @@ Page({
       }
     });
     let str1 = `$\\frac{43}{15}$`
-    // this.setData({
-    //   string:arr
-    // })
     let result1 = app.towxml(str1, 'markdown', {
-        // base: 'https://xxx.com',				// 相对资源的base路径
-        // theme: 'dark',					// 主题，默认`light`
         events: {					// 为元素绑定的事件方法
             tap: (e) => {
                 console.log('tap', e);
@@ -65,12 +56,11 @@ Page({
         }
     });
     // 更新解析数据
-    this.setData({
-        article: result,
-        isLoading: false,
-        result_text:result1
-    });
-
+    // this.setData({
+    //     article: result,
+    //     isLoading: false,
+    //     result_text:result1
+    // });
     this.setData({
       width:options.width,
       height:options.height,
@@ -84,7 +74,28 @@ Page({
         mask:false
       })
     }, 2000)
-    
+      console.log(that.data.imgsrc)
+    wx.uploadFile(
+        {
+            url:"http://192.168.1.185:12005/infer",
+            filePath:that.data.imgsrc,
+            name:"input",
+            success:function (res) {
+                let data = JSON.parse(res.data)
+                console.log(data)
+                console.log(data.latex)
+                let math = app.towxml("$"+data.latex+"$", 'markdown');
+                let result = app.towxml("$"+data.result+"$", 'markdown');
+                that.setData({
+                    math: math,
+                    result:result
+                })
+            },
+            fail:function (res) {
+                console.log(res)
+            }
+        }
+    )
   },
 
   /**

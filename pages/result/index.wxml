@@ -8,12 +8,12 @@
 
     <van-divider  custom-style="margin:0px;" contentPosition="left">返回结果</van-divider>
     <view class="math_c">
-        <towxml nodes="{{article}}"  />
+        <towxml nodes="{{math}}"  />
     </view>
 
     <van-divider  custom-style="margin:0px;" contentPosition="left">算式答案</van-divider>
     <view class="math_c">
-        <towxml nodes="{{result_text}}"  />
+        <towxml nodes="{{result}}"  />
     </view>
 
     <view class="again">

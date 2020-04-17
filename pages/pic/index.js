@@ -4,7 +4,7 @@ const mathModel = new MathModel()
 Page({
   data: {
       src:'',
-      width:400,//裁剪框初始宽度
+      width:300,//裁剪框初始宽度
       height: 200,//裁剪框初始高度
       imgWidth:400, // 图片宽
       imgHeight: 600, // 图片高
@@ -27,7 +27,7 @@ Page({
                 var allwidth  = options.allwidth 
                 var allheight = options.allheight
                 this.setData({
-                    width:allwidth,
+                    width:allwidth*0.8,
                     allheight:allheight*0.2,
                     imgWidth:allwidth,
                     imgHeight:allheight

@@ -1,10 +1,11 @@
 import { HTTP } from '../utils/http.js'
 class MathModel extends HTTP {
-  // getHotList() {
-  //   return this.request({
-  //     url: 'book/hot_list'
-  //   })
-  // }
+  getTest() {
+    return this.request({
+      url: 'awe',
+        method:'GET'
+    })
+  }
 
   // search(start, q) {
   //   return this.request({

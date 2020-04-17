@@ -1,4 +1,4 @@
 export const config = {
-  api_base_url: "http://bl.7yue.pro/v1/",
+  api_base_url: "http://127.0.0.1:12005/",
   appkey: "JieympC4hVYHYYtm"
 }

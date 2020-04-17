@@ -12,7 +12,6 @@ class HTTP {
       url: config.api_base_url + url,
       header: {
         'content-type': 'application/json',
-        'appkey': config.appkey
       },
       data: data,
       method: method,
