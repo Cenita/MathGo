@@ -2,42 +2,34 @@
 <view class='mask' bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}">
        
 </view>
+<image class="bgImg" src="../../images/bg.jpg"></image>
 <view class='Drawer' animation="{{animationData}}" wx:if="{{showModalStatus}}">
       <view class="item" wx:for="{{items}}" wx:key="{{index}}">
          
               <image  src="{{item.src}}"></image>
               <text>{{item.name}}</text>
-
-          
-      </view>   
+      </view>
 </view>
-
  <view class="box">
     <view class="navbar">
-        <view class="list" bindtap="powerDrawer" data-statu="open">
-           <image src="/images/list.png"></image>
-        </view>
-        <view class="history" bindtap="gosearch">
+        <view class="history list" bindtap="gosearch">
           <text>识别记录</text>
-          <image src="/images/search.png"></image>
+            <van-icon  name="search" />
+        </view>
+        <!-- 画板 -->
+        <view class="history  panel" bindtap="goPanel">
+            <text>画板绘制</text>
+            <van-icon name="edit" />
         </view>
     </view>
-    <!-- 画板 -->
-    <view class="history  panel" bindtap="goPanel">
-          <text>画板绘制</text>
-          <image src="/images/panel.png"></image>
-    </view>
+
 
     <view class="photo" bindtap="gophoto">
         <view>
             <image src="/images/index.png"></image>
-            
         </view>
-        <text>识别表达式</text>
+        <text>拍照识别</text>
     </view>
-    <image class="langhua" src="/images/langhua.png"></image>
-        
-    
 </view>
 
 

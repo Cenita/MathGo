@@ -1,6 +1,9 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index"
+  },
   "navigationBarBackgroundColor": "#308bff",
   "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "MathGo - 算式识别计算"
+  "navigationBarTitleText": "MathGo - 算式识别计算",
+  "navigationStyle": "custom"
 }
