@@ -8,9 +8,8 @@ Page({
     showModalStatus: false,
     items:[
       {name:'使用方式',src:'/images/drawer/1.png'},
-      {name:'开发者中心',src:'/images/drawer/2.png'},
-      {name:'联系我们',src:'/images/drawer/3.png'},
       {name:'使用演示',src:'/images/drawer/4.png'},
+      {name:'查看作者',src:'/images/drawer/3.png'},
     ]
   },
   gosearch(){

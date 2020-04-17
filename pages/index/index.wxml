@@ -22,7 +22,11 @@
             
             
         </cover-view>
+        <cover-view class="tips">
+            <span class="text">尽量保证字体不模糊,背景颜色纯正</span>
+        </cover-view>
         <cover-view class="bottom">
+
                 <cover-view class="pic" bindtap="openmask">
                     <cover-image src="/images/tuku.png"   ></cover-image>
                 </cover-view>

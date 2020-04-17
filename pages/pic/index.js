@@ -48,13 +48,6 @@ Page({
   },
   clickcut(e) {
         var tempImagePaths = e.detail.url
-        wx.compressImage({
-            src: tempImagePaths, // 图片路径
-            quality: 80, // 压缩质量
-            success(res){
-                console.log(res.tempFilePath) 
-            }
-        })
         let type =  this.data.array[this.data.index]
         var exprs = wx.getStorageSync("storage") || []
         var expr = { type: type, img: tempImagePaths}
@@ -62,7 +55,7 @@ Page({
         //将添加的元素存储到本地
         wx.setStorageSync("storage", exprs)
         wx.navigateTo({
-            url: `/pages/result/index?src=${tempImagePaths}`+`&width=${this.data.width}`+`&height=${this.data.height}`
+            url: `/pages/result/index?operation=${e.detail.operation}&src=${tempImagePaths}&width=${this.data.width}&height=${this.data.height}`
         })
   },
     returnToCamera(e){

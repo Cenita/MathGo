@@ -167,6 +167,7 @@ Component({
       x: 0,
       y: 0
     }], //鼠标和图片中心的相对位置
+    operation:"four",
     _flag_cut_touch:false,//是否是拖动裁剪框
     _hypotenuse_length: 0, //双指触摸时斜边长度
     _flag_img_endtouch: false, //是否结束触摸
@@ -310,7 +311,7 @@ Component({
           height: Math.round(this.data.height * this.data.export_scale),
           destWidth: this.data.width * this.data.export_scale,
           destHeight: Math.round(this.data.height) * this.data.export_scale,
-          fileType: 'png',
+          fileType: 'jpg',
           quality: this.data.quality,
           canvasId: this.data.el,
           success: (res) => {
@@ -875,14 +876,15 @@ Component({
               height: Math.round(this.data.height * this.data.export_scale),
               destWidth: this.data.width * this.data.export_scale,
               destHeight: Math.round(this.data.height) * this.data.export_scale,
-              fileType: 'png',
+              fileType: 'jpg',
               quality: this.data.quality,
               canvasId: this.data.el,
               success: (res) => {
                 this.triggerEvent('tapcut', {
                   url: res.tempFilePath,
                   width: this.data.width * this.data.export_scale,
-                  height: this.data.height * this.data.export_scale
+                  height: this.data.height * this.data.export_scale,
+                    operation:this.data.operation
                 });
               }
             }, this)

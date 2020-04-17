@@ -32,25 +32,27 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    this.setData({
-      width:options.width,
-      height:options.height,
-      // math: app.towxml("$2+59=as$", 'markdown'),
-      // result:app.towxml("$15a=$", 'markdown'),
-      imgsrc:options.src
-    })
-    console.log(that.data.imgsrc)
-    file.inferImage(that.data.imgsrc).then(res=>{
-        let math = app.towxml("$"+res.latex+"$", 'markdown');
-        let result = app.towxml("$"+res.result+"$", 'markdown');
-        that.setData({
-            math: math,
-            result:result,
-            loading:false
+      this.setData({
+          width:options.width,
+          height:options.height,
+          imgsrc:options.src
+      })
+      console.log(options)
+    if(options.operation==='four'){
+
+        console.log(that.data.imgsrc)
+        file.inferImage(that.data.imgsrc).then(res=>{
+            let math = app.towxml("$"+res.latex+"$", 'markdown');
+            let result = app.towxml("$"+res.result+"$", 'markdown');
+            that.setData({
+                math: math,
+                result:result,
+                loading:false
+            })
+        }).catch(res=>{
+            console.log(res)
         })
-    }).catch(res=>{
-        console.log(res)
-    })
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
