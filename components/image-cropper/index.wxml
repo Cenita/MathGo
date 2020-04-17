@@ -23,13 +23,14 @@
     <canvas canvas-id='image-cropper' disable-scroll="true" style="width:{{_canvas_width * export_scale}}px;height:{{_canvas_height * export_scale}}px;left:{{canvas_left}}px;top:{{canvas_top}}px" class='image-cropper-canvas'></canvas>
   </view>
  <view class="selectView">
-     <van-tabs style="color: #62aad3" color="#62aad3" swipeable border="false" active="{{operation}}">
+     <van-tabs style="color: #62aad3" color="#62aad3" swipeable border="false" active="four" bind:change="tabsChanges">
          <van-tab disabled title=""></van-tab>
          <van-tab disabled title=""></van-tab>
          <van-tab name="four" title="四则运算"></van-tab>
+         <van-tab name="yiyuan" title="一元二次"></van-tab>
+         <van-tab name="eryuan" title="二元一次"></van-tab>
          <van-tab name="ju" title="矩阵运算"></van-tab>
-         <van-tab name="wei" title="微积分"></van-tab>
-         <van-tab name="qiu" title="求导运算"></van-tab>
+         <van-tab name="he" title="求和运算"></van-tab>
          <van-tab disabled title=""></van-tab>
          <van-tab disabled title=""></van-tab>
      </van-tabs>

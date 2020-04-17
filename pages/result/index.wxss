@@ -28,7 +28,7 @@ page {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #308bff;
+  background: linear-gradient(to right , #2f93ff, #38d3ff);
   align-items: center;
 }
 .again .btn ,.again .edit {

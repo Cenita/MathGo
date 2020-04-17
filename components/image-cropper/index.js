@@ -919,6 +919,12 @@ Component({
     closeClick(){
         this.triggerEvent('close');
     },
+    tabsChanges(e){
+      console.log(e)
+      this.setData({
+          operation:e.detail.name
+      })
+    },
     //渲染
     _draw(callback) {
       if (!this.data.imgSrc) return;

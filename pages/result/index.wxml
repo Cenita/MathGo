@@ -12,12 +12,12 @@
     </view>
     <view wx:else>
         <van-divider  custom-style="margin:0px;" contentPosition="left">原式</van-divider>
-        <view class="math_c">
+        <view>
             <towxml nodes="{{math}}"  />
         </view>
 
         <van-divider  custom-style="margin:0px;" contentPosition="left">答案</van-divider>
-        <view class="math_c">
+        <view>
             <towxml nodes="{{result}}"  />
         </view>
     </view>
@@ -26,5 +26,6 @@
           <image  src="/images/fanhui.png"></image>
           <text>重新识别</text>
       </view>
-    </view> 
+    </view>
+    <van-notify id="van-notify" duration="1000" />
 </view>
