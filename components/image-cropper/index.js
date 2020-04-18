@@ -920,7 +920,8 @@ Component({
         this.triggerEvent('close');
     },
     tabsChanges(e){
-      console.log(e)
+      const index  = e.detail.index - 2
+      this.triggerEvent('getIndex',{index:index});
       this.setData({
           operation:e.detail.name
       })

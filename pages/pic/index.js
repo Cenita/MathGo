@@ -7,12 +7,13 @@ Page({
       imgWidth:400, // 图片宽
       imgHeight: 600, // 图片高
       picimg:'',
-      array: ['微积分', '三角函数', '线性方程', '矩阵','分数表达式'],
+      array: ['四则运算', '一元二次', '二元一次', '矩阵运算','求和运算'],
       index:0,
   },
-  bindPickerChange: function (e) {
+  getIndex(e){
+    let tabIndex = e.detail.index
     this.setData({
-      index: e.detail.value
+      index: tabIndex
     })
   },
   onLoad: function (options) {
