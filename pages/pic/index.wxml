@@ -4,6 +4,8 @@
   width="{{width}}"
   height="{{height}}"
   imgSrc="{{src}}"
+  min_width="{{minWidth}}"
+  min_height="{{minHeight}}"
   max_width="{{imgWidth}}"
   max_height="{{imgHeight}}"
   img_width="{{imgWidth}}"

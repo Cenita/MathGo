@@ -3,7 +3,7 @@
 </view>
 <view class="main" wx:else>
     <view class="img" style="margin-bottom: 50rpx">
-        <image src="{{imgsrc}}" style="height:200px"></image>
+        <image mode="aspectFit" src="{{imgsrc}}" style="height:200px"></image>
     </view>
     <view wx:if="{{loading}}">
         <van-skeleton title row="3" />

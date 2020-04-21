@@ -4,6 +4,8 @@ Page({
       src:'',
       width:300,//裁剪框初始宽度
       height: 200,//裁剪框初始高度
+      minWidth:20,
+      minHeight:20,
       imgWidth:400, // 图片宽
       imgHeight: 600, // 图片高
       picimg:'',
