@@ -17,7 +17,10 @@
         <view>
             <towxml nodes="{{math}}"  />
         </view>
-
+        <van-divider wx:if="{{mode==='four'}}"  custom-style="margin:0px;" contentPosition="left">化简</van-divider>
+        <view>
+            <towxml nodes="{{hua}}"  />
+        </view>
         <van-divider  custom-style="margin:0px;" contentPosition="left">答案</van-divider>
         <view>
             <towxml nodes="{{result}}"  />

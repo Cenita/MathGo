@@ -14,6 +14,7 @@ Page({
         mask:false,
         width:0,
         height:0,
+        hua:{},
         imgsrc:'../../images/bgc.png',
         loading:true,
         result:{},
@@ -25,7 +26,8 @@ Page({
             width:'50px',
             height:'50px'
         },
-        showTrack:false
+        showTrack:false,
+        mode:"four"
     },
     edit(){
       wx.navigateTo({
@@ -43,9 +45,10 @@ Page({
     onLoad: function (options) {
         var that = this;
         this.setData({
-          width:options.width,
-          height:options.height,
-          imgsrc:options.src
+            width:options.width,
+            height:options.height,
+            imgsrc:options.src,
+            mode:options.operation
         })
         console.log()
         if(options.operation==='four'){
@@ -53,12 +56,14 @@ Page({
             file.inferImage(that.data.imgsrc).then(res=>{
                 let math = app.towxml("$"+res.latex+"$", 'markdown');
                 let result = app.towxml("$= "+res.result+"$", 'markdown');
+                let hua = app.towxml("$= "+res.hua+"$", 'markdown');
                 that.setLocation(res.location);
                 that.stopLoading();
                 that.setData({
                     math: math,
                     result:result,
                     loading:false,
+                    hua:hua
                 })
                 if(math=='识别错误'){
                     Notify({ type: 'warning', message: '识别错误',duration:1500 });
