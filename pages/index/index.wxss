@@ -51,7 +51,7 @@ page {
   left: 0;
   right: 0;
   z-index: 99;
-  padding:  10rpx 0;
+  padding:  10rpx 0rpx;
 
 }
 .pic,.cancel  {
@@ -121,7 +121,6 @@ page {
   z-index: 99;
 }
 .ok {
-  position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.6);
@@ -132,9 +131,6 @@ page {
 }
 .tips{
   z-index: 999;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   height: 50rpx;
   position: absolute;
   color:white;
@@ -147,8 +143,32 @@ page {
   margin: auto;
   text-align: center;
 }
+.line{
+  z-index: 999;
+  position: absolute;
+  color:white;
+  width: 100%;
+  text-align: center;
+  bottom: 55vh;
 
-
+}
+.assitance{
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.8);
+}
+.line-tips{
+  z-index: 999;
+  position: absolute;
+  bottom: 51vh;
+  width: 100%;
+  color:white;
+  text-align: center;
+}
+.line-tips .t{
+  margin-top: auto;
+  text-align: center;
+}
 
 
 

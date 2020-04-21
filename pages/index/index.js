@@ -53,9 +53,7 @@ Page({
         count: 1,
         type: 'image',
         success(res) {
-          
           var  temp = res.tempFiles[0].path
-          
           wx.navigateTo({
             url: `/pages/pic/index?src=${temp}`
           })
