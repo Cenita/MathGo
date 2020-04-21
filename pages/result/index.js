@@ -5,33 +5,35 @@ import {config} from "../../config";
 const file = new fileUpload();
 const app = getApp();
 Page({
-  /**
-   * 页面的初始数据
-   */
-  data: {
-      isLoading: true,					// 判断是否尚在加载中
-      math: {},						// 内容数据
-      mask:false,
-      width:0,
-      height:0,
-      imgsrc:'../../images/bgc.png',
-      loading:true,
-      result:{}
-  },
-  edit(){
+    /**
+    * 页面的初始数据
+    */
+    data: {
+        isLoading: true,					// 判断是否尚在加载中
+        math: {},						// 内容数据
+        mask:false,
+        width:0,
+        height:0,
+        imgsrc:'../../images/bgc.png',
+        loading:true,
+        result:{},
+        scanAni:"",
+        scanXunHuan:""
+    },
+    edit(){
       wx.navigateTo({
         url: '/pages/edit/index',
       })
-  },
-  back(){
+    },
+    back(){
       wx.navigateBack({
         delta:2
       })
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+    },
+    /**
+    * 生命周期函数--监听页面加载
+    */
+    onLoad: function (options) {
     var that = this;
       this.setData({
           width:options.width,
@@ -44,19 +46,24 @@ Page({
         file.inferImage(that.data.imgsrc).then(res=>{
             let math = app.towxml("$"+res.latex+"$", 'markdown');
             let result = app.towxml("$= "+res.result+"$", 'markdown');
+            that.stopLoading()
             that.setData({
                 math: math,
                 result:result,
                 loading:false
             })
-            if(result!='计算错误')
+            if(math=='识别错误'){
+                Notify({ type: 'warning', message: '识别错误',duration:1500 });
+            }
+            else if(result!='计算错误')
                 Notify({ type: 'success', message: '识别成功',duration:1500 });
         }).catch(res=>{
+
             Notify({ type: 'warning', message: '发生错误',duration:3000 });
-            console.log("发生错误")
+            console.log("发生错误",res)
         })
     }
-    // else if(options.operation==='ju'){
+        // else if(options.operation==='ju'){
     //     setTimeout(()=>{
     //         let math = app.towxml("$\\begin{bmatrix}3&2&1\\\\9&2&6\\end{bmatrix}+\\begin{bmatrix}2&5&1\\\\3&4&2\\end{bmatrix}$", 'markdown');
     //         let result = app.towxml("$= \\begin{bmatrix}5&7&2\\\\12&6&8\\end{bmatrix}$", 'markdown');
@@ -112,12 +119,50 @@ Page({
     //         Notify({ type: 'success', message: '识别成功',duration:1500 });
     //     },1000)
     // }
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  start(e){
+    },
+    onReady(){
+        let scanAnimation = wx.createAnimation({
+            duration:2000,
+            timingFunction:'ease-in-out',
+            delay:0
+        })
+        scanAnimation.top('160px').opacity(0).step().top("-40px").opacity(1).step({duration:0});
+        this.setData({
+            scanAni:scanAnimation.export()
+        })
+        let xh = setInterval(function () {
+            this.setData({
+                scanAni:"",
+            })
+            let scanAnimation = wx.createAnimation({
+                duration:2000,
+                timingFunction:'ease-in-out',
+                delay:0,
+            })
+            scanAnimation.top('160px').opacity(0).step().top("-40px").opacity(1).step({duration:0});
+            this.setData({
+                scanAni:scanAnimation.export()
+            })
+        }.bind(this),2000)
+        this.setData({
+            scanXunHuan:xh
+        })
+    },
+    methods:{
+
+    },
+    stopLoading:function () {
+        clearInterval(this.data.scanXunHuan)
+        this.setData({
+            loading:false,
+            scanAni:""
+        })
+    },
+    /**
+    * 生命周期函数--监听页面初次渲染完成
+    */
+    start(e){
     console.log("123")
-  },
+    },
 })
 
