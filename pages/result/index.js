@@ -18,7 +18,13 @@ Page({
         loading:true,
         result:{},
         scanAni:"",
-        scanXunHuan:""
+        scanXunHuan:"",
+        trackingBox:{
+            top:'0px',
+            left:"0px",
+            width:'50px',
+            height:'50px'
+        }
     },
     edit(){
       wx.navigateTo({
