@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9439294a-cbbd-4b9f-bd27-fdc9a15eb4c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,7 +29,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="74" />
+          <entry key="js" value="75" />
           <entry key="json" value="37" />
           <entry key="png" value="4" />
           <entry key="wxml" value="46" />
@@ -43,7 +41,7 @@
           <entry key="HTML" value="45" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="37" />
-          <entry key="JavaScript" value="74" />
+          <entry key="JavaScript" value="75" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Wxss" value="29" />
         </counts>
@@ -86,11 +84,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="676">
               <caret line="163" column="14" lean-forward="true" selection-start-line="163" selection-start-column="14" selection-end-line="163" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -158,13 +165,13 @@
         <option value="$PROJECT_DIR$/pages/panel/index.js" />
         <option value="$PROJECT_DIR$/pages/pic/index.wxml" />
         <option value="$PROJECT_DIR$/pages/result/index.wxss" />
-        <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/pages/pic/index.js" />
         <option value="$PROJECT_DIR$/pages/result/index.wxml" />
         <option value="$PROJECT_DIR$/pages/result/index.js" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/index/index.wxss" />
+        <option value="$PROJECT_DIR$/config.js" />
       </list>
     </option>
   </component>
@@ -182,7 +189,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="564" />
     <option name="y" value="-8" />
     <option name="width" value="1095" />
@@ -328,12 +335,12 @@
       <workItem from="1587024132024" duration="8369000" />
       <workItem from="1587098740721" duration="20916000" />
       <workItem from="1587143258187" duration="1707000" />
-      <workItem from="1587449095459" duration="13457000" />
+      <workItem from="1587449095459" duration="13793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50909000" />
+    <option name="totallyTimeSpent" value="51245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -585,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/result/index.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -646,6 +646,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
           <caret line="163" column="14" lean-forward="true" selection-start-line="163" selection-start-column="14" selection-end-line="163" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
         </state>
       </provider>
     </entry>
