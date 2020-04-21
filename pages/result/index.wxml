@@ -4,7 +4,7 @@
 <view class="main" wx:else>
     <view class="img" style="margin-bottom: 50rpx">
         <image mode="aspectFit" src="{{imgsrc}}" style="height:200px"></image>
-        <view class="showTrack" style="top:{{trackingBox.top}};left:{{trackingBox.left}};width:{{trackingBox.width}};height:{{trackingBox.height}}"></view>
+        <view class="showTrack" wx:if="{{showTrack}}" style="top:{{trackingBox.top}};left:{{trackingBox.left}};width:{{trackingBox.width}};height:{{trackingBox.height}}"></view>
         <view class="scanTexiao" animation="{{scanAni}}"></view>
     </view>
     <view wx:if="{{loading}}">

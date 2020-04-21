@@ -58,7 +58,7 @@ Page({
         //将添加的元素存储到本地
         wx.setStorageSync("storage", exprs)
         wx.navigateTo({
-            url: `/pages/result/index?operation=${e.detail.operation}&src=${tempImagePaths}&width=${this.data.width}&height=${this.data.height}`
+            url: `/pages/result/index?operation=${e.detail.operation}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}`
         })
   },
     returnToCamera(e){
