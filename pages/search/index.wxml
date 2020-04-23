@@ -6,7 +6,14 @@
     </scroll-view>
     <swiper class="swiper" current="{{activeIndex}}" bindchange="changeSwiper" style="height:{{winHeight}}px">
         <swiper-item class="test query-{{index}}" wx:for="{{detail}}" wx:key="index" >
-            <view class="items" wx:for="{{item}}" wx:key="index">
+            <view class="items" 
+            wx:for="{{item}}"
+            wx:for-index="idx"
+            wx:key="index"
+            bindtap="goDetail"
+            data-group="{{index}}"
+            data-index="{{idx}}"
+            >
                <view class="box">
                   <view class="sort">
                         <text>{{item.type}}</text>
@@ -17,7 +24,8 @@
         </swiper-item>
     </swiper>
 
-    <view class="tip" >
-        已经没有啦
+    <view class="tip" hidden="{{!show}}">
+        <image src="/images/search/bgc.png"></image>
+        <text>该栏目暂无识别记录</text>
     </view>
 </view>
