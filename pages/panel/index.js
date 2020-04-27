@@ -11,14 +11,20 @@ Page({
   onLoad: function () {
       http.getPannelStatus().then(res=>{
         if(!res.pannel){
-            Dialog.alert({
-                title: '提醒',
-                message: '绘画功能正在上线中'
-            }).then(() => {
-                wx.navigateTo({
-                    url: `/pages/first/index`
-                })
-            });
+            wx.showModal({
+                title: '提示',
+                showCancel: false,//是否显示取消按钮
+                content: '绘画功能正在上线中',
+                success: function (res) {
+                    if (res.confirm) {//这里是点击了确定以后
+                        wx.navigateTo({
+                            url: `/pages/first/index`
+                        })
+                    } else {//这里是点击了取消以后
+                        console.log('用户点击取消')
+                    }
+                }
+            })
         }
       })
     this.context = wx.createCanvasContext('myCanvas');

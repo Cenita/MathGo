@@ -1,3 +1,4 @@
+<van-dialog id="van-dialog" style="z-index: 9999" />
 <view class='container'>
   <canvas class="canvas-container"
    canvas-id="myCanvas"
@@ -5,9 +6,9 @@
    bindtouchstart="touchStart"
    bindtouchmove="touchMove"
    bindtouchend="touchEnd"
-   bindtouchcancel="touchEnd">
+   bindtouchcancel="touchEnd"
+          style="z-index: 10">
   </canvas>
-    <van-dialog id="van-dialog" />
   <view class="btm">
     <view class='tool-container'>
           <view class='pen {{0 === activeIndex?"active":""}}' catchtap='selectPenWidthTap' data-index="0">

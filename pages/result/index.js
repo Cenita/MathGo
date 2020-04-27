@@ -16,7 +16,7 @@ Page({
         height:0,
         hua:"",
         imgsrc:'../../images/bgc.png',
-        loading:false,
+        loading:true,
         result:{},
         scanAni:"",
         scanXunHuan:"",
