@@ -14,9 +14,9 @@ Page({
         mask:false,
         width:0,
         height:0,
-        hua:{},
+        hua:"",
         imgsrc:'../../images/bgc.png',
-        loading:true,
+        loading:false,
         result:{},
         scanAni:"",
         scanXunHuan:"",
@@ -28,7 +28,12 @@ Page({
         },
         showTrack:false,
         mode:"four",
-        type:''
+        type:'',
+        showHua:false,
+        error_result:[],
+        modification:["空","0","1","2","3","4","5","6","7","8","9","(",")","+","-","×","/","."],
+        modifiView:false,
+        nowChangeChar:""
     },
     edit(){
       wx.navigateTo({
@@ -52,21 +57,26 @@ Page({
             mode:options.operation,
             type:options.type
         })
-        console.log()
         if(options.operation==='four'){
-            
             file.inferImage(that.data.imgsrc).then(res=>{
                 console.log(res)
                 let math = app.towxml("$"+res.latex+"$", 'markdown');
                 let result = app.towxml("$= "+res.result+"$", 'markdown');
-                let hua = app.towxml("$= "+res.hua+"$", 'markdown');
+                if(res.hua!=""){
+                    let hua = app.towxml("$= "+res.hua+"$", 'markdown');
+                    that.setData({
+                      showHua:true,
+                      hua:hua
+                    })
+                }
                 that.setLocation(res.location);
                 that.stopLoading();
                 that.setData({
+                    originLetex:res.result,
                     math: math,
                     result:result,
                     loading:false,
-                    hua:hua
+                    error_result:res.mayError_char
                 })
                 var exprs = wx.getStorageSync("storage") || []
                 var expr = { 
@@ -76,12 +86,9 @@ Page({
                     hua:res.hua,
                     result:res.result
                 }
-
                 exprs.push(expr)
                 //将添加的元素存储到本地
                 wx.setStorageSync("storage", exprs)
-                
-                
                 if(math=='识别错误'){
                     Notify({ type: 'warning', message: '识别错误',duration:1500 });
                 }
@@ -93,62 +100,6 @@ Page({
                 console.log("发生错误",res)
             })
         }
-            // else if(options.operation==='ju'){
-        //     setTimeout(()=>{
-        //         let math = app.towxml("$\\begin{bmatrix}3&2&1\\\\9&2&6\\end{bmatrix}+\\begin{bmatrix}2&5&1\\\\3&4&2\\end{bmatrix}$", 'markdown');
-        //         let result = app.towxml("$= \\begin{bmatrix}5&7&2\\\\12&6&8\\end{bmatrix}$", 'markdown');
-        //         that.setData({
-        //             math: math,
-        //             result:result,
-        //             loading:false
-        //         })
-        //         Notify({ type: 'success', message: '识别成功',duration:1500 });
-        //     },1000)
-        // }else if(options.operation==='eryuan'){
-        //     setTimeout(()=>{
-        //         let math = app.towxml("$\\left\\{\\begin{matrix}x+y=7 \\\\ 2x+3y=18\\end{matrix}\\right.$", 'markdown');
-        //         let result = app.towxml("$= \\left\\{\\begin{matrix}x=3 \\\\ y=4\\end{matrix}\\right.$", 'markdown');
-        //         that.setData({
-        //             math: math,
-        //             result:result,
-        //             loading:false
-        //         })
-        //         Notify({ type: 'success', message: '识别成功',duration:1500 });
-        //     },1000)
-        // }else if(options.operation==='yiyuan'){
-        //     setTimeout(()=>{
-        //         let math = app.towxml("$x^{2}+2x+1=0$", 'markdown');
-        //         let result = app.towxml("$= \\left\\{\\begin{matrix}x=+2 \\\\ x=-2\\end{matrix}\\right.$", 'markdown');
-        //         that.setData({
-        //             math: math,
-        //             result:result,
-        //             loading:false
-        //         })
-        //         Notify({ type: 'success', message: '识别成功',duration:1500 });
-        //     },1000)
-        // }else if(options.operation==='he'){
-        //     setTimeout(()=>{
-        //         let math = app.towxml("$\\sum_{i=1}^{4}{2X}$", 'markdown');
-        //         let result = app.towxml("$= 20$", 'markdown');
-        //         that.setData({
-        //             math: math,
-        //             result:result,
-        //             loading:false
-        //         })
-        //         Notify({ type: 'success', message: '识别成功',duration:1500 });
-        //     },1000)
-        // }else if(options.operation==='pannel'){
-        //     setTimeout(()=>{
-        //         let math = app.towxml("$2+6$", 'markdown');
-        //         let result = app.towxml("$= 8$", 'markdown');
-        //         that.setData({
-        //             math: math,
-        //             result:result,
-        //             loading:false
-        //         })
-        //         Notify({ type: 'success', message: '识别成功',duration:1500 });
-        //     },1000)
-        // }
     },
     onReady(){
         let scanAnimation = wx.createAnimation({
@@ -178,8 +129,20 @@ Page({
             scanXunHuan:xh
         })
     },
-    methods:{
-
+    showModify:function (c) {
+        c = c.currentTarget.dataset
+        this.setData({ modifiView: true,nowChangeChar:c });
+    },
+    modifyClose:function(){
+        this.setData({ modifiView: false });
+    },
+    modifyConfirm:function(e){
+        let val = e.detail.value;
+        let er = `error_result[${this.data.nowChangeChar.index}][2]`;
+        this.setData({
+            [er]:val,
+            modifiView: false
+        })
     },
     setLocation:function(location){
         let zuobiao = location;

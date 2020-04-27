@@ -3,7 +3,10 @@
     "towxml": "/towxml/towxml",
     "van-divider": "@vant/weapp/divider/index",
     "van-skeleton": "@vant/weapp/skeleton/index",
-    "van-notify": "@vant/weapp/notify/index"
+    "van-notify": "@vant/weapp/notify/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index"
   },
   "navigationBarTitleText": "识别结果"
 }
