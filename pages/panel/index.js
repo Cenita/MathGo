@@ -1,3 +1,6 @@
+import { httpGet } from '../../models/math.js'
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+const http = new httpGet();
 Page({
   data: {
     penWidth: 2, // 画笔的大小
@@ -6,6 +9,18 @@ Page({
     revoke: [],
   },
   onLoad: function () {
+      http.getPannelStatus().then(res=>{
+        if(!res.pannel){
+            Dialog.alert({
+                title: '提醒',
+                message: '绘画功能正在上线中'
+            }).then(() => {
+                wx.navigateTo({
+                    url: `/pages/first/index`
+                })
+            });
+        }
+      })
     this.context = wx.createCanvasContext('myCanvas');
     this.context.setFillStyle('white')
     this.context.fillRect(0, 0, 750, 600)

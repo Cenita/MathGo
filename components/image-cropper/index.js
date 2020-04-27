@@ -1,5 +1,12 @@
 Component({
   properties: {
+    'modelList':{
+      type:Object,
+      value:[{name:"s"}]
+    },
+    'a': {
+        type: String
+    },
     /**     
      * 图片路径
      */
@@ -167,7 +174,7 @@ Component({
       x: 0,
       y: 0
     }], //鼠标和图片中心的相对位置
-    operation:"four",
+    operation:"",
     _flag_cut_touch:false,//是否是拖动裁剪框
     _hypotenuse_length: 0, //双指触摸时斜边长度
     _flag_img_endtouch: false, //是否结束触摸
@@ -181,6 +188,11 @@ Component({
     _img_top: wx.getSystemInfoSync().windowHeight / 2, //图片上边距
     _img_left: wx.getSystemInfoSync().windowWidth / 2, //图片左边距
     watch: {
+      modelList(value,that){
+        that.setData({
+            operation:value[0].url
+        })
+      },
       //监听截取框宽高变化
       width(value, that) {
         if (value < that.data.min_width){
@@ -917,6 +929,7 @@ Component({
       // });
     },
     closeClick(){
+      console.log(this.data.modelList)
         this.triggerEvent('close');
     },
     tabsChanges(e){

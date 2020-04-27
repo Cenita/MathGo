@@ -1,4 +1,5 @@
-import { MathModel } from '../../models/math.js'
+import { httpGet } from '../../models/math.js'
+const http = new httpGet();
 Page({
   data: {
       src:'',
@@ -9,7 +10,7 @@ Page({
       imgWidth:400, // 图片宽
       imgHeight: 600, // 图片高
       picimg:'',
-      array: ['四则运算', '一元二次', '二元一次', '矩阵运算','求和运算'],
+      modeList: [],
       index:0,
   },
   getIndex(e){
@@ -19,6 +20,12 @@ Page({
     })
   },
   onLoad: function (options) {
+      let that = this;
+      http.getModeStuts().then(res=>{
+          that.setData({
+              modeList:res
+          })
+      })
         console.log(options)
         if (options.width == undefined)
         {
@@ -51,7 +58,7 @@ Page({
   },
   clickcut(e) {
         var tempImagePaths = e.detail.url
-        let type =  this.data.array[this.data.index]
+        let type =  this.data.modeList[this.data.index]
         // var exprs = wx.getStorageSync("storage") || []
         // var expr = { type: type, img: tempImagePaths}
         // exprs.push(expr)

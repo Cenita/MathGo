@@ -57,49 +57,46 @@ Page({
             mode:options.operation,
             type:options.type
         })
-        if(options.operation==='four'){
-            file.inferImage(that.data.imgsrc).then(res=>{
-                console.log(res)
-                let math = app.towxml("$"+res.latex+"$", 'markdown');
-                let result = app.towxml("$= "+res.result+"$", 'markdown');
-                if(res.hua!=""){
-                    let hua = app.towxml("$= "+res.hua+"$", 'markdown');
-                    that.setData({
-                      showHua:true,
-                      hua:hua
-                    })
-                }
-                that.setLocation(res.location);
-                that.stopLoading();
+        file.inferImage(options.operation,that.data.imgsrc).then(res=>{
+            console.log(res)
+            let math = app.towxml("$"+res.latex+"$", 'markdown');
+            let result = app.towxml("$= "+res.result+"$", 'markdown');
+            if(res.hua!=""){
+                let hua = app.towxml("$= "+res.hua+"$", 'markdown');
                 that.setData({
-                    originLetex:res.result,
-                    math: math,
-                    result:result,
-                    loading:false,
-                    error_result:res.mayError_char
+                  showHua:true,
+                  hua:hua
                 })
-                var exprs = wx.getStorageSync("storage") || []
-                var expr = { 
-                    type: this.data.type,
-                    img: this.data.imgsrc,
-                    math:res.latex,
-                    hua:res.hua,
-                    result:res.result
-                }
-                exprs.push(expr)
-                //将添加的元素存储到本地
-                wx.setStorageSync("storage", exprs)
-                if(math=='识别错误'){
-                    Notify({ type: 'warning', message: '识别错误',duration:1500 });
-                }
-                else if(result!='计算错误')
-                    Notify({ type: 'success', message: '识别成功',duration:1500 });
-            }).catch(res=>{
-
-                Notify({ type: 'warning', message: '发生错误',duration:3000 });
-                console.log("发生错误",res)
+            }
+            that.setLocation(res.location);
+            that.stopLoading();
+            that.setData({
+                originLetex:res.result,
+                math: math,
+                result:result,
+                loading:false,
+                error_result:res.mayError_char
             })
-        }
+            var exprs = wx.getStorageSync("storage") || []
+            var expr = {
+                type: this.data.type,
+                img: this.data.imgsrc,
+                math:res.latex,
+                hua:res.hua,
+                result:res.result
+            }
+            exprs.push(expr)
+            //将添加的元素存储到本地
+            wx.setStorageSync("storage", exprs)
+            if(res.latex=='识别错误'){
+                Notify({ type: 'warning', message: '识别错误',duration:1500 });
+            }
+            else if(res.result!='计算错误')
+                Notify({ type: 'success', message: '识别成功',duration:1500 });
+        }).catch(res=>{
+            Notify({ type: 'warning', message: '发生错误',duration:3000 });
+            console.log("发生错误",res)
+        })
     },
     onReady(){
         let scanAnimation = wx.createAnimation({

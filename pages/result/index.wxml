@@ -33,7 +33,7 @@
                 </span>
             </view>
         </view>
-        <van-divider wx:if="{{mode==='four'&&hua!=''}}"  custom-style="margin:0px;" contentPosition="left">化简</van-divider>
+        <van-divider wx:if="{{hua!=''}}"  custom-style="margin:0px;" contentPosition="left">化简</van-divider>
         <view wx:if="{{hua!=''}}">
             <towxml nodes="{{hua}}"  />
         </view>
