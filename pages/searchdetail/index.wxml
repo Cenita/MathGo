@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="img">
+        <image src="{{img}}" mode="aspectFit"></image>
+    </view>
+    <view class="box">
+        <view class="math">
+            <text>原式</text>
+            <towxml nodes="{{math}}"  />
+        </view>
+        <view class="hua">
+            <text>化简</text>
+            <towxml nodes="{{hua}}"  />
+        </view>
+        <view class="result">
+            <text>结果</text>
+            <towxml nodes="{{result}}"  />
+        </view>
+    </view>
+    
+</view>

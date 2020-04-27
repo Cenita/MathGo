@@ -27,7 +27,8 @@ Page({
             height:'50px'
         },
         showTrack:false,
-        mode:"four"
+        mode:"four",
+        type:''
     },
     edit(){
       wx.navigateTo({
@@ -48,12 +49,14 @@ Page({
             width:options.width,
             height:options.height,
             imgsrc:options.src,
-            mode:options.operation
+            mode:options.operation,
+            type:options.type
         })
         console.log()
         if(options.operation==='four'){
-            console.log(that.data.imgsrc)
+            
             file.inferImage(that.data.imgsrc).then(res=>{
+                console.log(res)
                 let math = app.towxml("$"+res.latex+"$", 'markdown');
                 let result = app.towxml("$= "+res.result+"$", 'markdown');
                 let hua = app.towxml("$= "+res.hua+"$", 'markdown');
@@ -65,6 +68,20 @@ Page({
                     loading:false,
                     hua:hua
                 })
+                var exprs = wx.getStorageSync("storage") || []
+                var expr = { 
+                    type: this.data.type,
+                    img: this.data.imgsrc,
+                    math:res.latex,
+                    hua:res.hua,
+                    result:res.result
+                }
+
+                exprs.push(expr)
+                //将添加的元素存储到本地
+                wx.setStorageSync("storage", exprs)
+                
+                
                 if(math=='识别错误'){
                     Notify({ type: 'warning', message: '识别错误',duration:1500 });
                 }
