@@ -4,6 +4,7 @@ import Notify from '../../miniprogram_npm/@vant/weapp/notify/notify';
 import {config} from "../../config";
 const file = new fileUpload();
 const app = getApp();
+
 Page({
     /**
     * 页面的初始数据
@@ -30,25 +31,109 @@ Page({
         mode:"four",
         type:'',
         showHua:false,
-        error_result:[],
+        // error_result:[],
+        error_result:[
+            {error:'a',new:''},
+            {error:'b',new:''},
+            {error:'c',new:''},
+            {error:'d',new:''},
+        ],
         modification:["空","0","1","2","3","4","5","6","7","8","9","(",")","+","-","×","/","."],
         modifiView:false,
-        nowChangeChar:""
+        nowChangeChar:"",
+        changeArr:[],
+        initerrorStr:''
     },
     edit(){
       wx.navigateTo({
         url: '/pages/edit/index',
       })
     },
-    back(){
-      wx.navigateBack({
-        delta:2
-      })
+    back(){  // 重新识别
+    //   wx.navigateBack({
+    //     delta:2
+    //   })
+    //   console.log(this.data.error_result)
+     let initStr = this.data.initerrorStr
+      let changeArr = this.data.changeArr
+      let errors = this.data.error_result
+      var  newArr = []
+      for(let i=0,len=errors.length;i<len;i++)
+      {
+          if(errors[i].new == '')
+          {
+           
+            var  temp = changeArr[i]
+            temp = temp.substring(1,temp.length-1)
+            newArr.push(temp)
+          }
+          else {
+            newArr.push(errors[i].new)  
+          }
+      }
+      
+      for(let i=0,len=newArr.length;i<len;i++)
+      {
+        initStr =   initStr.replace("/color{Red}"+changeArr[i],newArr[i])
+      }
+      console.log(newArr)
+      console.log(this.data.changeArr)
+      console.log(initStr)   // 最终的发到后端的字符串
+      
     },
     /**
     * 生命周期函数--监听页面加载
     */
     onLoad: function (options) {
+        console.log(this.data.error_result)
+        let str = '123/color{Red}{123{x}asd}aaa/color{Red}{a}9999/color{Red}{asdqqq}55'
+        let arr =  str.split('/color{Red}')
+        arr.shift() // 删除第一个空的元素
+        let newArr = []
+        let changeArr = [];
+        for(let a=0,arrlen=arr.length;a<arrlen;a++)
+        {
+          let first = arr[a]
+          let result =  this.digui(first)     
+          newArr.push(result)
+          let newStr = ''
+          let count = 0
+          for(let i=0,len=arr[a].length;i<len;i++)
+          {
+              newStr += arr[a][i]
+              if(arr[a][i] == '{')
+              {
+                  count += 1
+              }
+              if(arr[a][i]=='}')
+              {
+                count -= 1
+                if(count == 0 )
+                {
+                  break // 匹配到最外的括号退出循环
+                }
+              }
+          }
+            let  reStr =  newStr
+            changeArr.push(reStr)
+        }
+       
+        console.log(changeArr)  // 等待改变的
+        this.setData({
+            changeArr,
+            initerrorStr:str
+        })
+        
+    
+        let allArr = []
+        for(let i =0,len=newArr.length;i<len;i++)
+        {
+            allArr.push({"error":newArr[i],"new":''})
+        }
+        this.setData({
+            error_result:allArr
+        })
+
         var that = this;
         this.setData({
             width:options.width,
@@ -75,8 +160,9 @@ Page({
                 math: math,
                 result:result,
                 loading:false,
-                error_result:res.mayError_char
+                // error_result:res.mayError_char
             })
+            // console.log(this.data.error_result)
             var exprs = wx.getStorageSync("storage") || []
             var expr = {
                 type: this.data.type,
@@ -127,17 +213,28 @@ Page({
         })
     },
     showModify:function (c) {
+        console.log(c)
         c = c.currentTarget.dataset
         this.setData({ modifiView: true,nowChangeChar:c });
+        // this.setData({ 
+        //     modifiView: true,
+
+        // });
     },
     modifyClose:function(){
         this.setData({ modifiView: false });
     },
     modifyConfirm:function(e){
+        console.log(e)
         let val = e.detail.value;
-        let er = `error_result[${this.data.nowChangeChar.index}][2]`;
+        // let er = `error_result[${this.data.nowChangeChar.index}][2]`;
+        let index = this.data.nowChangeChar.index
+        this.data.error_result[index].new = val
+        
+        
         this.setData({
-            [er]:val,
+            // [er]:val,
+            error_result:this.data.error_result,
             modifiView: false
         })
     },
@@ -189,6 +286,48 @@ Page({
     */
     start(e){
     console.log("123")
+    },
+    digui(str){
+            let count = 0  // 每一个color后面的字符串进行{}计算
+            let newStr = ''
+            let  l_star = 0 
+            let r_star = 0 
+            let star = 0   // 标记是否匹配过 括号
+            for(let i=0,len=str.length;i<len;i++)
+            {
+              newStr += str[i]
+              if(str[i] == '{')
+              {
+                count += 1
+                if (count==1)
+                {
+                  l_star = i
+                }
+                     
+                star += 1 
+              }
+              if(str[i]=='}')
+              {
+                count -= 1
+                star += 1
+                
+                if(count == 0 )
+                {
+                  r_star = i
+                  break
+                  // 匹配到最外的括号退出循环
+                }
+              }
+            }
+            
+           
+            if(star >= 2)
+            {  
+              return this.digui(newStr.substring(l_star+1,r_star))  
+            }   
+            else {
+              return newStr
+            }
     },
 })
 

@@ -16,20 +16,26 @@
         <van-divider  custom-style="margin:0px;" contentPosition="left">原式</van-divider>
         <view style="margin-bottom: 30rpx">
             <towxml nodes="{{math}}"  />
-            <!-- wx:for=-->
+            <!-- wx:modifyConfirmfor=-->
             <view wx:key="index" wx:for="{{error_result}}" style="padding: 20rpx 15%;font-size: 15px;color: #c64445">
-                <span>{{item[0]}}</span>
+                <!-- <span>{{item[0]}}</span> -->
+                <span>{{item.error}}</span>
                 <span style="font-size: 10px;">
 
-                    <van-icon style="margin-left: 20rpx" name="arrow" />
-                    <van-icon style="margin-right: 20rpx" name="arrow" />
-                    <span style="font-size: 13px;">识别率{{item[1]}}%</span>
+                    <!-- <van-icon style="margin-left: 20rpx" name="arrow" />
+                    <van-icon style="margin-right: 20rpx" name="arrow" /> -->
+                    <!-- <span style="font-size: 13px;">识别率{{item[1]}}%</span> -->
+                    
                     <van-icon style="margin-left: 20rpx" name="arrow" />
                     <van-icon style="margin-right: 20rpx" name="arrow" />
                 </span>
-                <span style="width: 50rpx" bindtap="showModify" data-index="{{index}}" data-char="{{item[0]}}">
+                <!-- <span style="width: 50rpx" bindtap="showModify" data-index="{{index}}" data-char="{{item[0]}}">
                     <span wx:if="{{item[2]==null}}">点击修改{{item[2]}}</span>
                     <span wx:else>{{item[2]}}</span>
+                </span> -->
+                <span style="width: 50rpx" bindtap="showModify" data-index="{{index}}">
+                    <span wx:if="{{item.new == ''}}">点击修改{{item.new}}</span>
+                    <span wx:else>{{item.new}}</span>
                 </span>
             </view>
         </view>
