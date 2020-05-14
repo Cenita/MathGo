@@ -7,30 +7,43 @@ Page({
     penColor: '#333',
     activeIndex: -1,
     revoke: [],
+    borderwidth:0,
+    borderheight:0,
+    allwidth:0,
+    allheight:0,
   },
   onLoad: function () {
-      http.getPannelStatus().then(res=>{
-        if(!res.pannel){
-            wx.showModal({
-                title: '提示',
-                showCancel: false,//是否显示取消按钮
-                content: '绘画功能正在上线中',
-                success: function (res) {
-                    if (res.confirm) {//这里是点击了确定以后
-                        wx.navigateTo({
-                            url: `/pages/first/index`
-                        })
-                    } else {//这里是点击了取消以后
-                        console.log('用户点击取消')
-                    }
-                }
-            })
-        }
-      })
+      // http.getPannelStatus().then(res=>{
+      //   if(!res.pannel){
+      //       wx.showModal({
+      //           title: '提示',
+      //           showCancel: false,//是否显示取消按钮
+      //           content: '绘画功能正在上线中',
+      //           success: function (res) {
+      //               if (res.confirm) {//这里是点击了确定以后
+      //                   wx.navigateTo({
+      //                       url: `/pages/first/index`
+      //                   })
+      //               } else {//这里是点击了取消以后
+      //                   console.log('用户点击取消')
+      //               }
+      //           }
+      //       })
+      //   }
+      // })
     this.context = wx.createCanvasContext('myCanvas');
     this.context.setFillStyle('white')
     this.context.fillRect(0, 0, 750, 600)
     this.context.draw()
+    var query = wx.createSelectorQuery();
+    query.select('.container').boundingClientRect( (rect) =>{
+      this.setData({
+        allwidth: rect.width,
+        allheight:rect.height,
+          borderwidth:rect.width-50,
+          borderheight:"200px"
+      })
+    }).exec();
   },
   startX: 0,
   startY: 0,
@@ -158,7 +171,14 @@ Page({
       success: function (res) {
         var tempImagePaths = res.tempFilePath;
         wx.navigateTo({
-          url: `/pages/result/index?src=${tempImagePaths}&operation=pannel`
+          // url: `/pages/result/index?src=${tempImagePaths}&operation=pannel`
+          
+            url: `/pages/pic/index?src=${tempImagePaths}`
+            // `&width=${this.data.borderwidth}`+
+            // `&height=${this.data.borderheight}`+
+            // `&allwidth=${this.data.allwidth}`+
+            // `&allheight=${this.data.allheight}`
+          
         })
       }
     })

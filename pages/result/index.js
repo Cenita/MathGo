@@ -50,36 +50,38 @@ Page({
       })
     },
     back(){  // 重新识别
-    //   wx.navigateBack({
-    //     delta:2
-    //   })
+      wx.navigateBack({
+        delta:2
+      })
     //   console.log(this.data.error_result)
-     let initStr = this.data.initerrorStr
-      let changeArr = this.data.changeArr
-      let errors = this.data.error_result
-      var  newArr = []
-      for(let i=0,len=errors.length;i<len;i++)
-      {
-          if(errors[i].new == '')
-          {
-           
-            var  temp = changeArr[i]
-            temp = temp.substring(1,temp.length-1)
-            newArr.push(temp)
-          }
-          else {
-            newArr.push(errors[i].new)  
-          }
-      }
       
-      for(let i=0,len=newArr.length;i<len;i++)
-      {
-        initStr =   initStr.replace("/color{Red}"+changeArr[i],newArr[i])
-      }
-      console.log(newArr)
-      console.log(this.data.changeArr)
-      console.log(initStr)   // 最终的发到后端的字符串
-      
+    },
+    again(){
+        let initStr = this.data.initerrorStr
+        let changeArr = this.data.changeArr
+        let errors = this.data.error_result
+        var  newArr = []
+        for(let i=0,len=errors.length;i<len;i++)
+        {
+            if(errors[i].new == '')
+            {
+             
+              var  temp = changeArr[i]
+              temp = temp.substring(1,temp.length-1)
+              newArr.push(temp)
+            }
+            else {
+              newArr.push(errors[i].new)  
+            }
+        }
+        
+        for(let i=0,len=newArr.length;i<len;i++)
+        {
+          initStr =   initStr.replace("/color{Red}"+changeArr[i],newArr[i])
+        }
+        console.log(newArr)
+        console.log(this.data.changeArr)
+        console.log(initStr)   // 最终的发到后端的字符串
     },
     /**
     * 生命周期函数--监听页面加载
