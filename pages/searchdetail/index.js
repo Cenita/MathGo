@@ -20,10 +20,16 @@ Page({
 
     let type = options.type
     let img  = options.img
-    let math = app.towxml("$"+options.math+"$", 'markdown');
-    let result = app.towxml("$= "+options.result+"$", 'markdown');
-    let hua = app.towxml("$= "+options.hua+"$", 'markdown');
-    console.log(math)
+    // let math = app.towxml("$"+options.math+"$", 'markdown');
+    // let result = app.towxml("$= "+options.result+"$", 'markdown');
+    // let hua = app.towxml("$= "+options.hua+"$", 'markdown');
+    let url  = 'http://latex.codecogs.com/gif.latex?'
+    let math =  url + options.math
+    math = encodeURI(math)
+    let result  = url + options.result
+    result = encodeURI(result)
+    let hua  = url + options.hua
+    hua = encodeURI(hua)
     this.setData({
       type,
       img,

@@ -33,10 +33,10 @@ Page({
         showHua:false,
         // error_result:[],
         error_result:[
-            {error:'a',new:''},
-            {error:'b',new:''},
-            {error:'c',new:''},
-            {error:'d',new:''},
+            // {error:'a',new:''},
+            // {error:'b',new:''},
+            // {error:'c',new:''},
+            // {error:'d',new:''},
         ],
         modification:["空","0","1","2","3","4","5","6","7","8","9","(",")","+","-","×","/","."],
         modifiView:false,
@@ -87,54 +87,54 @@ Page({
     * 生命周期函数--监听页面加载
     */
     onLoad: function (options) {
-        console.log(this.data.error_result)
-        let str = '123/color{Red}{123{x}asd}aaa/color{Red}{a}9999/color{Red}{asdqqq}55'
-        let arr =  str.split('/color{Red}')
-        arr.shift() // 删除第一个空的元素
-        let newArr = []
-        let changeArr = [];
-        for(let a=0,arrlen=arr.length;a<arrlen;a++)
-        {
-          let first = arr[a]
-          let result =  this.digui(first)     
-          newArr.push(result)
-          let newStr = ''
-          let count = 0
-          for(let i=0,len=arr[a].length;i<len;i++)
-          {
-              newStr += arr[a][i]
-              if(arr[a][i] == '{')
-              {
-                  count += 1
-              }
-              if(arr[a][i]=='}')
-              {
-                count -= 1
-                if(count == 0 )
-                {
-                  break // 匹配到最外的括号退出循环
-                }
-              }
-          }
-            let  reStr =  newStr
-            changeArr.push(reStr)
-        }
+        // console.log(this.data.error_result)
+        // let str = '123/color{Red}{123{x}asd}aaa/color{Red}{a}9999/color{Red}{asdqqq}55'
+        // let arr =  str.split('/color{Red}')
+        // arr.shift() // 删除第一个空的元素
+        // let newArr = []
+        // let changeArr = [];
+        // for(let a=0,arrlen=arr.length;a<arrlen;a++)
+        // {
+        //   let first = arr[a]
+        //   let result =  this.digui(first)     
+        //   newArr.push(result)
+        //   let newStr = ''
+        //   let count = 0
+        //   for(let i=0,len=arr[a].length;i<len;i++)
+        //   {
+        //       newStr += arr[a][i]
+        //       if(arr[a][i] == '{')
+        //       {
+        //           count += 1
+        //       }
+        //       if(arr[a][i]=='}')
+        //       {
+        //         count -= 1
+        //         if(count == 0 )
+        //         {
+        //           break // 匹配到最外的括号退出循环
+        //         }
+        //       }
+        //   }
+        //     let  reStr =  newStr
+        //     changeArr.push(reStr)
+        // }
        
-        console.log(changeArr)  // 等待改变的
-        this.setData({
-            changeArr,
-            initerrorStr:str
-        })
+        // console.log(changeArr)  // 等待改变的
+        // this.setData({
+        //     changeArr,
+        //     initerrorStr:str
+        // })
         
     
-        let allArr = []
-        for(let i =0,len=newArr.length;i<len;i++)
-        {
-            allArr.push({"error":newArr[i],"new":''})
-        }
-        this.setData({
-            error_result:allArr
-        })
+        // let allArr = []
+        // for(let i =0,len=newArr.length;i<len;i++)
+        // {
+        //     allArr.push({"error":newArr[i],"new":''})
+        // }
+        // this.setData({
+        //     error_result:allArr
+        // })
 
         var that = this;
         this.setData({

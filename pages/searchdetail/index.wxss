@@ -24,3 +24,8 @@ page {
   font-size: 34rpx;
   line-height: 34rpx;
 }
+.latex {
+  padding: 40rpx 0 ;
+  height: 100rpx;
+  width: 100%;
+}

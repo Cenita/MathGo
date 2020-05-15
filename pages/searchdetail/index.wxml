@@ -5,15 +5,18 @@
     <view class="box">
         <view class="math">
             <text>原式</text>
-            <towxml nodes="{{math}}"  />
+            <!-- <towxml nodes="{{math}}"  /> -->
+             <image class="latex" mode="aspectFit" src="{{math}}"></image>
         </view>
         <view class="hua">
             <text>化简</text>
-            <towxml nodes="{{hua}}"  />
+            <!-- <towxml nodes="{{hua}}"  /> -->
+             <image class="latex" mode="aspectFit" src="{{hua}}"></image>
         </view>
         <view class="result">
             <text>结果</text>
-            <towxml nodes="{{result}}"  />
+            <!-- <towxml nodes="{{result}}"  /> -->
+             <image class="latex" mode="aspectFit" src="{{result}}"></image>
         </view>
     </view>
     

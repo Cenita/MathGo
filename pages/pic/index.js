@@ -59,13 +59,14 @@ Page({
   clickcut(e) {
         var tempImagePaths = e.detail.url
         let type =  this.data.modeList[this.data.index]
+        let types = type.name
         // var exprs = wx.getStorageSync("storage") || []
         // var expr = { type: type, img: tempImagePaths}
         // exprs.push(expr)
         // //将添加的元素存储到本地
         // wx.setStorageSync("storage", exprs)
         wx.navigateTo({
-            url: `/pages/result/index?operation=${e.detail.operation}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${type}`
+            url: `/pages/result/index?operation=${e.detail.operation}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}`
         })
   },
     returnToCamera(e){
