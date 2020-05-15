@@ -14,8 +14,8 @@
     </view>
     <view wx:else style="margin-bottom: 200rpx">
         <van-divider  custom-style="margin:0px;" contentPosition="left">原式</van-divider>
-        <view style="margin-bottom: 30rpx">
-            <towxml nodes="{{math}}"  />
+        <view style="margin-bottom: 30rpx;padding:0 40rpx">
+            <image class="latex" mode="aspectFit" src="{{math}}"></image>
             <!-- wx:modifyConfirmfor=-->
             <view wx:key="index" wx:for="{{error_result}}" style="padding: 20rpx 15%;font-size: 15px;color: #c64445">
                 <!-- <span>{{item[0]}}</span> -->
@@ -39,13 +39,14 @@
                 </span>
             </view>
         </view>
-        <van-divider wx:if="{{hua!=''}}"  custom-style="margin:0px;" contentPosition="left">化简</van-divider>
-        <view wx:if="{{hua!=''}}">
-            <towxml nodes="{{hua}}"  />
+        <van-divider wx:if="{{hua!=''}}"  custom-style="margin:0px;" contentPosition="left" >化简</van-divider>
+        <view wx:if="{{hua!=''}}" style="padding:0 40rpx">
+            <image class="latex" mode="aspectFit" src="{{hua}}"></image>
         </view>
         <van-divider  custom-style="margin:0px;" contentPosition="left">答案</van-divider>
-        <view>
-            <towxml nodes="{{result}}"  />
+        <view style="padding:0 40rpx">
+            
+            <image class="latex" mode="aspectFit" src="{{result}}"></image>
         </view>
         <van-popup position="bottom" show="{{ modifiView }}" bind:close="modifyClose" >
             <van-picker show-toolbar title='修改 "{{nowChangeChar.char}}" 字符' columns="{{ modification }}" bind:cancel="modifyClose" bind:confirm="modifyConfirm" />

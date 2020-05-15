@@ -145,11 +145,16 @@ Page({
             type:options.type
         })
         file.inferImage(options.operation,that.data.imgsrc).then(res=>{
-            console.log(res)
-            let math = app.towxml("$"+res.latex+"$", 'markdown');
-            let result = app.towxml("$= "+res.result+"$", 'markdown');
+            let url  = 'http://latex.codecogs.com/gif.latex?'
+            
+            let math =  url + res.latex
+            math = encodeURI(math)
+            let result  = url + res.result
+            result = encodeURI(result)
+            console.log(result)
             if(res.hua!=""){
-                let hua = app.towxml("$= "+res.hua+"$", 'markdown');
+                let hua  = url + res.hua
+                hua = encodeURI(hua)
                 that.setData({
                   showHua:true,
                   hua:hua
@@ -164,7 +169,7 @@ Page({
                 loading:false,
                 // error_result:res.mayError_char
             })
-            // console.log(this.data.error_result)
+            
             var exprs = wx.getStorageSync("storage") || []
             var expr = {
                 type: this.data.type,

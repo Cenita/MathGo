@@ -69,8 +69,11 @@ Page({
         })
   },
     returnToCamera(e){
-        wx.navigateTo({
-            url: `/pages/index/index`
+        // wx.navigateTo({
+        //     url: `/pages/index/index`
+        // })
+        wx.navigateBack({
+          delta:1
         })
     }
 })
