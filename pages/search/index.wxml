@@ -18,7 +18,10 @@
                   <view class="sort">
                         <text>{{item.type}}</text>
                   </view>
-                  <image class="all_img" src="{{item.img}}"></image>
+                  <image class="all_img" 
+                   src="{{item.img}}"
+                   style="height:{{item.height}}rpx"
+                    ></image>
                </view>
             </view>
         </swiper-item>

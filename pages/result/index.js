@@ -87,6 +87,7 @@ Page({
     * 生命周期函数--监听页面加载
     */
     onLoad: function (options) {
+        console.log(options)
         // console.log(this.data.error_result)
         // let str = '123/color{Red}{123{x}asd}aaa/color{Red}{a}9999/color{Red}{asdqqq}55'
         // let arr =  str.split('/color{Red}')
@@ -169,6 +170,8 @@ Page({
             var expr = {
                 type: this.data.type,
                 img: this.data.imgsrc,
+                width:this.data.width,
+                height:this.data.height,
                 math:res.latex,
                 hua:res.hua,
                 result:res.result

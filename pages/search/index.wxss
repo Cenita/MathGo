@@ -26,6 +26,7 @@
 swiper {
   width: 100%;
   height: 100%;
+  margin-bottom: 50rpx;
 }
 .items {
   padding-top: 30rpx;
@@ -36,8 +37,8 @@ swiper {
 }
 .box {
   width: 96%;
-  margin:0 auto;
-  height: 300rpx;
+  height: 100%;
+  margin:0 auto ;
   border: 1px solid #eee;
   box-sizing: border-box;
   border-radius: 20rpx;
@@ -58,7 +59,7 @@ swiper {
 }
 .all_img{
   width: 100%;
-  height: 240rpx;
+  /* height: 100%; */
 }
 .tip {
   display: flex;

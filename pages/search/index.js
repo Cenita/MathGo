@@ -11,8 +11,13 @@ Page({
       [],[],[],[],[],[]
     ],
     itemsHeight:0,
-    show:false
+    show:false,
+    allHeight:0,
+    sortHeight:0,
+    extra:0,
   },
+ 
+
   changeTab(e){
     const i = e.currentTarget.dataset.index
     this.setData({
@@ -20,7 +25,16 @@ Page({
     })
   },
   changeSwiper(e){
-    let tempHeight = this.data.itemsHeight * (this.data.detail[e.detail.current].length)
+    // let tempHeight = this.data.itemsHeight * (this.data.detail[e.detail.current].length)
+    let exprs = this.data.detail[e.detail.current]
+    let tempHeight = 0
+   for(let a = 0,len = exprs.length;a<len;a++)
+   {
+     let heigh = exprs[a].height
+     tempHeight +=  parseInt(heigh)
+   }
+   console.log(tempHeight)  // 全部图片的高度
+   
     var   show = false
     if(tempHeight == 0)
     {
@@ -57,11 +71,28 @@ Page({
     this._initHeight()
     
   },
+  
   // 分类筛选
   _formatData(){
+    
 
     var exprs = wx.getStorageSync("storage") || []
-    
+
+    let allHeight = 0
+   for(let a = 0,len = exprs.length;a<len;a++)
+   {
+     let heigh = exprs[a].height
+     allHeight +=  parseInt(heigh)
+   }
+   console.log(allHeight)  // 全部图片的高度
+
+  
+
+   this.setData({
+    allHeight:allHeight 
+   })
+
+
     
 
     for (let i = 0,len=this.data.navlist.length;i<=len;i++)
@@ -98,29 +129,28 @@ Page({
   _initHeight(){
     var query = wx.createSelectorQuery();
     query.selectAll('.query-0 .items').boundingClientRect( (rect) => {
-      
-      var windowheight = 0;
-      if(rect[0] == null){
-        this.setData({
-          show:true
-        })
-        return
+      console.log(rect)
+      let all = 0
+      for(let i = 0,len=rect.length;i<len;i++)
+      {
+          all += rect[i].height
       }
-
-      var itemsHeight = rect[0].height;
-      
-      
-      for (var i = 0; i < rect.length;i++)
-      { 
-        windowheight += rect[i].height
-      }
-     
+      console.log(all)
       this.setData({
-        itemsHeight: itemsHeight,
-        winHeight: windowheight,
+          winHeight:all 
       })
-      
+      if(all == 0)
+      {
+        this.setData({
+              show:true
+        })
+      }
+    
+    
+    
     }).exec();
+    
+    
     
   }
 })

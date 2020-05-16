@@ -7,7 +7,7 @@
             <text>原式</text>
             <towxml nodes="{{math}}"  />
         </view>
-        <view class="hua">
+        <view class="hua" wx:if="{{hua!=''}}">
             <text>化简</text>
             <towxml nodes="{{hua}}"  />
         </view>
