@@ -3,7 +3,7 @@ module.exports = {
 
     // 数学公式解析API
     latex:{
-        api:'http://towxml.vvadd.com/?tex'
+        api:'http://latex.cenita.cn/?tex'
       // api: 'https://www.zhihu.com/equation?tex'
         // 需要自己构建一个
     },
