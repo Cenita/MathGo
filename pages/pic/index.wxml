@@ -16,6 +16,8 @@
   bindtapcut="clickcut"
   bindclose="returnToCamera"
   quality="0.8"
+  cut_top="{{cut_top}}"
+  cut_left="{{cut_left}}"
   bind:getIndex="getIndex"
   >
   </image-cropper>

@@ -173,8 +173,7 @@ Page({
         wx.navigateTo({
           // url: `/pages/result/index?src=${tempImagePaths}&operation=pannel`
           
-            url: `/pages/pic/index?src=${tempImagePaths}`
-            // `&width=${this.data.borderwidth}`+
+            url: `/pages/pic/index?src=${tempImagePaths}`+'&types=panel'
             // `&height=${this.data.borderheight}`+
             // `&allwidth=${this.data.allwidth}`+
             // `&allheight=${this.data.allheight}`

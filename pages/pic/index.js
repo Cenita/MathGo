@@ -12,57 +12,83 @@ Page({
       picimg:'',
       modeList: [],
       index:0,
+      cut_top:0,
+      cut_left:0,
+      status:'xiangji'
+   
   },
   getIndex(e){
-    let tabIndex = e.detail.index
+    let tabIndex = e.detail.index4
     this.setData({
       index: tabIndex
     })
   },
   onLoad: function (options) {
-      let that = this;
-      http.getModeStuts().then(res=>{
-          that.setData({
-              modeList:res
-          })
-      })
-        console.log(options)
-        if (options.width == undefined)
-        {
-            console.log("我是空的")
-        }
-        else {
-                var allwidth  = options.allwidth 
-                var allheight = options.allheight
-                this.setData({
-                    width:allwidth*0.8,
-                    allheight:allheight*0.2,
-                    imgWidth:allwidth,
-                    imgHeight:allheight
-                })
-        }
-      const img = options.src;
-      this.cropper = this.selectComponent("#image-cropper");
-      //开始裁剪
-      this.setData({
-          src:img
-      });
+    let info = wx.getSystemInfoSync()
+    if(options.types == 'panel')
+    {
+      let num = 300
+      let cut_top = (info.windowHeight - num) * 0.3;
+      let cut_left = (info.windowWidth - num) * 0.5;
+       this.setData({
+          status:'panel',
+          width:num,
+          height:num,
+          imgWidth:num,
+          imgHeight:num,
+          cut_top:cut_top,
+          cut_left:cut_left
+       })
+       
+    }else {
+     
+        var allwidth  = options.allwidth 
+        var allheight = options.allheight
+        this.setData({
+            width:allwidth*0.8,
+            allheight:allheight*0.2,
+            imgWidth:allwidth,
+            imgHeight:allheight,
+            
+        })
+    }
+    
+   
+
+    let that = this;
+    http.getModeStuts().then(res=>{
+        that.setData({
+            modeList:res
+        })
+    })
+      
+     
+    const img = options.src;
+    this.cropper = this.selectComponent("#image-cropper");
+    //开始裁剪
+    this.setData({
+        src:img
+    });
+    
+      
   },
   cropperload(e){
       console.log("cropper初始化完成");
   },
   loadimage(e){
         // 重置图片角度、缩放、位置
-    this.cropper.imgReset();
+    if(this.data.status == 'xiangji'){
+      this.cropper.imgReset();
+    }
     wx.hideLoading();
   },
   clickcut(e) {
         var tempImagePaths = e.detail.url
         let type =  this.data.modeList[this.data.index]
-       
+       let status = this.data.status
         let types   =  type.name
         wx.navigateTo({
-            url: `/pages/result/index?operation=${e.detail.operation}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}`
+            url: `/pages/result/index?operation=${e.detail.operation}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`
         })
   },
     returnToCamera(e){

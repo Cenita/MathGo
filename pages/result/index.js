@@ -145,6 +145,16 @@ Page({
             mode:options.operation,
             type:options.type
         })
+
+
+        let panel = options.status 
+        if(panel=='panel')
+        {
+            var panelStatus = 'panel'
+        }
+        // 如果 是画板的话  就 panelStatus
+        
+        
         file.inferImage(options.operation,that.data.imgsrc).then(res=>{
             console.log(res)
             let math = app.towxml("$"+res.latex+"$", 'markdown');

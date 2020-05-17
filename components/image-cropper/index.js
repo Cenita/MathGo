@@ -158,7 +158,10 @@ Component({
     'limit_move':{
       type: Boolean,
       value: false
-    }
+    },
+    // 'beishu': {
+    //   type: Number,
+    // },
   },
   data: {
     el: 'image-cropper', //暂时无用
@@ -614,17 +617,17 @@ Component({
         }
       };
       //裁剪框坐标处理（如果只写一个参数则另一个默认为0，都不写默认居中）
-      if (this.data.cut_top == null && this.data.cut_left == null) {
+      if (this.data.cut_top == 0 && this.data.cut_left == 0) {
         this._setCutCenter();
-      } else if (this.data.cut_top != null && this.data.cut_left != null){
+      } else if (this.data.cut_top != 0 && this.data.cut_left != 0){
         _cutDetectionPositionTop();
         _cutDetectionPositionLeft();
-      } else if (this.data.cut_top != null && this.data.cut_left == null) {
+      } else if (this.data.cut_top != 0 && this.data.cut_left == 0) {
         _cutDetectionPositionTop();
         this.setData({
           cut_left: (this.data.info.windowWidth - this.data.width) / 2
         });
-      } else if (this.data.cut_top == null && this.data.cut_left != null) {
+      } else if (this.data.cut_top == 0 && this.data.cut_left != 0) {
         _cutDetectionPositionLeft();
         this.setData({
           cut_top: (this.data.info.windowHeight - this.data.height) / 2
