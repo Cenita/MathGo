@@ -2,11 +2,13 @@ import { FileHttp } from '../utils/upload.js'
 import { HTTP } from "../utils/http.js";
 
 class fileUpload extends FileHttp{
-  inferImage(url,imagePath){
+  inferImage(url,imagePath,Status){
     return this.request({
         url:url,
         name:'input'
-        ,imagePath:imagePath}
+        ,imagePath:imagePath
+        ,status:Status
+    }
     )
   }
 }
