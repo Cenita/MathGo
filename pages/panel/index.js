@@ -5,12 +5,9 @@ Page({
   data: {
     penWidth: 2, // 画笔的大小
     penColor: '#333',
-    activeIndex: -1,
+    activeIndex: 0,
     revoke: [],
-    borderwidth:0,
-    borderheight:0,
-    allwidth:0,
-    allheight:0,
+    clear:false
   },
   onLoad: function () {
       // http.getPannelStatus().then(res=>{
@@ -31,100 +28,109 @@ Page({
       //       })
       //   }
       // })
-    this.context = wx.createCanvasContext('myCanvas');
-    this.context.setFillStyle('white')
-    this.context.fillRect(0, 0, 750, 600)
-    this.context.draw()
-    var query = wx.createSelectorQuery();
-    query.select('.container').boundingClientRect( (rect) =>{
-      this.setData({
-        allwidth: rect.width,
-        allheight:rect.height,
-          borderwidth:rect.width-50,
-          borderheight:"200px"
+      const query = wx.createSelectorQuery()
+      this.canvas = query.select('#myCanvas')
+      console.log(this.canvas)
+      query.select('#myCanvas').fields({ node: true, size: true }).exec((res)=>{
+        const canvas = res[0].node   // 
+        this.canvas = canvas
+        console.log(res)
+        this.ctx  = canvas.getContext('2d')
+        this.canvas.width = res[0].width
+        this.canvas.height  = res[0].height
+        this.ctx.fillStyle = "#fff"
+        this.ctx.fillRect(0, 0, 750, 600)
+        
+        
       })
-    }).exec();
+    
+    
+   
   },
   startX: 0,
   startY: 0,
   begin: false,
-  actions: [],
+  canvasHistory :[],  // 绘制历史
+  step : -1,
   touchStart: function (e) {
-    this.setStyle();
-    this.startX = e.changedTouches[0].x;
-    this.startY = e.changedTouches[0].y;
-    this.context.beginPath();
-    var revoke = this.data.revoke;
-    revoke.push(this.actions.length);
-    this.setData({
-      revoke: revoke
-    });
-    var actions = this.context.getActions();
-    this.actions = this.actions.concat(actions);
-    wx.drawCanvas({
-      canvasId: "myCanvas",
-      actions: actions,
-      reserve: true
-    }) 
+    if(this.data.clear == false)
+    {
+      this.setStyle();
+      this.startX = e.changedTouches[0].x;
+      this.startY = e.changedTouches[0].y;
+      this.ctx.beginPath();
+    }else {
+      
+    }
   },
   touchMove: function (e) {
-    this.context.moveTo(this.startX, this.startY);
-    this.startX = e.changedTouches[0].x;
-    this.startY = e.changedTouches[0].y;
-    this.context.lineTo(this.startX, this.startY);
-    this.context.stroke();
-    var actions = this.context.getActions();
-    this.actions.push(actions[0]);
-    wx.drawCanvas({
-      canvasId: 'myCanvas',
-      reserve: true,
-      actions: actions
-    })
+   
+    if(this.data.clear == false)
+    {
+      this.ctx.moveTo(this.startX,this.startY)
+       this.startX = e.changedTouches[0].x;
+      this.startY = e.changedTouches[0].y;
+      this.ctx.lineTo(this.startX, this.startY);
+      this.ctx.stroke();
+    }else {
+      this.startX = e.changedTouches[0].x;
+      this.startY = e.changedTouches[0].y;
+      // this.ctx.clearRect(this.startX-5,this.startY-5,10,10);
+      this.ctx.beginPath();
+      this.ctx.arc(this.startX ,  this.startY, 10, 0, 2 * Math.PI);
+      this.ctx.closePath();
+      this.ctx.fillStyle = 'white';
+      this.ctx.fill();
+    }
+    
   },
   touchEnd: function (e) {
-    wx.setStorageSync('draft', this.actions)
+    // wx.setStorageSync('draft', this.actions)
+    this.step++;
+    if (this.step < this.canvasHistory.length) {
+    	this.canvasHistory.length = this.step; // 截断数组
+    }
+    this.canvasHistory.push(this.canvas.toDataURL()); 
+    this.ctx.closePath();
   },
   // 撤回
   revokeCanvas:function (e) {
-    const i = e.currentTarget.dataset.index
-
-    this.setData({
-      activeIndex:1
-    })
-    var revoke = this.data.revoke;
-    if (revoke.length != 0) {
-      wx.drawCanvas({
-        canvasId: "myCanvas",
-        actions: [],
-        reserve: false
-      });
-      this.actions = this.actions.slice(0, revoke[revoke.length - 1]);
-      wx.drawCanvas({
-        canvasId: "myCanvas",
-        actions: this.actions,
-        reserve: true
-      })
-      revoke.pop();
-      this.setData({
-        revoke: revoke
+    console.log(this.step)
+    if(this.step > 0 )
+    {
+      this.step--;
+      let canvasPic = this.canvas.createImage()
+      canvasPic.src = this.canvasHistory[this.step];
+      canvasPic.onload = ()=>{
+        this.ctx.drawImage(canvasPic, 0, 0);
+      }
+    }else {
+     
+      wx.showModal({
+        title: '不能继续撤销了',
+        success (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
       })
     }
+  
+    
   },
-
-
-
-
   setStyle: function () {
-    this.context.setStrokeStyle(this.data.penColor)
-    this.context.setLineWidth(this.data.penWidth)
-    this.context.setLineCap('round') // 让线条圆润
-    this.context.setLineJoin("round")
+    
+    this.ctx.lineWidth = this.data.penWidth
+    this.ctx.lineCap="round"
   },
   //画笔
   selectPenWidthTap(e){
     const i = e.currentTarget.dataset.index
 
       this.setData({
+        clear:false,
         activeIndex:0,
         penColor: '#333',
         penWidth:2
@@ -134,10 +140,10 @@ Page({
   clearTap: function (e) {
     const i = e.currentTarget.dataset.index
 
-    var penColor = '#ffffff';
     this.setData({
+      clear:true,
       penWidth:4,
-      penColor: penColor,
+      penColor: '#fff',
       activeIndex:2
     })
   },
@@ -147,39 +153,32 @@ Page({
       this.setData({
         activeIndex:3
       })
-      this.context.clearRect(0, 0, 750, 700);
-      this.context.draw();
-      this.context = wx.createCanvasContext('myCanvas');
-      this.context.setFillStyle('white')
-      this.context.fillRect(0, 0, 750, 700)
-      this.context.draw()
-      this.setData({
-        isClear: false,
-      })
+      this.ctx.clearRect(0, 0, 750, 750);
+      this.ctx.fillStyle = '#fff';
+      this.ctx.fillRect(0, 0, 750, 750);
   },
   confirmTap: function () {
-    var that = this;
     wx.canvasToTempFilePath({
       x: 0,
       y: 0,
       fileType: 'jpg',
       width: 750,
-      height: 700,
+      height: 750,
       destWidth: 300,
       destHeight: 300,
-      canvasId: 'myCanvas',
+      canvas:this.canvas,
       success: function (res) {
         var tempImagePaths = res.tempFilePath;
         wx.navigateTo({
           // url: `/pages/result/index?src=${tempImagePaths}&operation=pannel`
           
             url: `/pages/pic/index?src=${tempImagePaths}`+'&types=panel'
-            // `&height=${this.data.borderheight}`+
-            // `&allwidth=${this.data.allwidth}`+
-            // `&allheight=${this.data.allheight}`
+          
           
         })
+      },fail:function(err){
+        console.log(err)
       }
-    })
+    },this)
   }, 
 })

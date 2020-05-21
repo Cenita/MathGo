@@ -1,13 +1,15 @@
-<van-dialog id="van-dialog" style="z-index: 9999" />
-<view class='container'>
-  <canvas class="canvas-container"
-   canvas-id="myCanvas"
+<!-- <van-dialog id="van-dialog" style="z-index: 9999" /> -->
+<view class="container">
+
+  <canvas
+   type="2d"
+   id="myCanvas"
    disable-scroll="true"
    bindtouchstart="touchStart"
    bindtouchmove="touchMove"
    bindtouchend="touchEnd"
    bindtouchcancel="touchEnd"
-          style="z-index: 10">
+   style="z-index: 10;width:100%;height:80vh">
   </canvas>
   <view class="btm">
     <view class='tool-container'>
@@ -30,5 +32,5 @@
   </view>
   <view class='ok' catchtap='confirmTap'>完成</view>
   </view>
-</view>
 
+</view>
