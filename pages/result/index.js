@@ -102,9 +102,9 @@ Page({
         file.inferImage(this.data.mode,that.data.imgsrc,{"status":options.status}).then(res=>{
             console.log(res)
             let math = app.towxml("$"+res.latex+"$", 'markdown');
-            let result = app.towxml("$= "+res.result+"$", 'markdown');
+            let result = app.towxml("$"+res.result+"$", 'markdown');
             if(res.hua!=""){
-                let hua = app.towxml("$= "+res.hua+"$", 'markdown');
+                let hua = app.towxml("$"+res.hua+"$", 'markdown');
                 that.setData({
                   showHua:true,
                   hua:hua

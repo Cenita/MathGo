@@ -92,7 +92,6 @@ Page({
       let status = this.data.status
       // let types = e.detail.name;
       let types   =  "四则运算";
-      console.log(`/pages/result/index?operation=${url}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`)
         wx.navigateTo({
             url: `/pages/result/index?operation=${url}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`
         })
