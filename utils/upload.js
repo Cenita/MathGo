@@ -1,16 +1,17 @@
 import { config } from '../config.js'
 
 class FileHttp {
-  request({ url,name, imagePath}) {
+  request({ url,name, imagePath,formData}) {
     return new Promise((resolve, reject) => {
-      this._request(url,name, resolve, reject, imagePath)
+      this._request(url,name, resolve, reject, imagePath,formData)
     })
   }
-  _request(url,name, resolve, reject, imagePath) {
+  _request(url,name, resolve, reject, imagePath , formData={}) {
     wx.uploadFile({
       url: config.api_base_url + url,
       filePath: imagePath,
       name:name,
+      formData:formData,
       success: function (res) {
         // 判断以2（2xx)开头的状态码为正确
         // 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可

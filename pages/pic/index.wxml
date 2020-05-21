@@ -10,7 +10,7 @@
   max_height="{{imgHeight}}"
   img_width="{{imgWidth}}"
   img_height="{{imgHeight}}"
-  modelList="{{modeList}}"
+  modeList="{{modeList}}"
   bindload="cropperload"
   bindimageload="loadimage"
   bindtapcut="clickcut"

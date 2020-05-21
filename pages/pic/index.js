@@ -14,11 +14,10 @@ Page({
       index:0,
       cut_top:0,
       cut_left:0,
-      status:'xiangji'
-   
+      status:'camera'
   },
   getIndex(e){
-    let tabIndex = e.detail.index4
+    let tabIndex = e.detail.index;
     this.setData({
       index: tabIndex
     })
@@ -83,12 +82,19 @@ Page({
     wx.hideLoading();
   },
   clickcut(e) {
-        var tempImagePaths = e.detail.url
-        let type =  this.data.modeList[this.data.index]
-       let status = this.data.status
-        let types   =  type.name
+      // let url = JSON.stringify({
+      //     "url":e.detail.operation
+      // });
+      let url = e.detail.operation;
+      url = url.replace("?","%1")
+      url = url.replace("=","%2")
+      var tempImagePaths = e.detail.url
+      let status = this.data.status
+      // let types = e.detail.name;
+      let types   =  "四则运算";
+      console.log(`/pages/result/index?operation=${url}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`)
         wx.navigateTo({
-            url: `/pages/result/index?operation=${e.detail.operation}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`
+            url: `/pages/result/index?operation=${url}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`
         })
   },
     returnToCamera(e){

@@ -1,6 +1,6 @@
 Component({
   properties: {
-    'modelList':{
+    'modeList':{
       type:Object,
       value:[{name:"s"}]
     },
@@ -191,7 +191,8 @@ Component({
     _img_top: wx.getSystemInfoSync().windowHeight / 2, //图片上边距
     _img_left: wx.getSystemInfoSync().windowWidth / 2, //图片左边距
     watch: {
-      modelList(value,that){
+      modeList(value,that){
+        console.log("modelist",)
         that.setData({
             operation:value[0].url
         })
@@ -932,7 +933,7 @@ Component({
       // });
     },
     closeClick(){
-      console.log(this.data.modelList)
+      console.log(this.data.modeList)
         this.triggerEvent('close');
     },
     tabsChanges(e){

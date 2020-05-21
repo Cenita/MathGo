@@ -28,7 +28,7 @@ Page({
             height:'50px'
         },
         showTrack:false,
-        mode:"four",
+        mode:"",
         type:'',
         showHua:false,
         // error_result:[],
@@ -87,65 +87,19 @@ Page({
     * 生命周期函数--监听页面加载
     */
     onLoad: function (options) {
-        console.log(options)
-        // console.log(this.data.error_result)
-        // let str = '123/color{Red}{123{x}asd}aaa/color{Red}{a}9999/color{Red}{asdqqq}55'
-        // let arr =  str.split('/color{Red}')
-        // arr.shift() // 删除第一个空的元素
-        // let newArr = []
-        // let changeArr = [];
-        // for(let a=0,arrlen=arr.length;a<arrlen;a++)
-        // {
-        //   let first = arr[a]
-        //   let result =  this.digui(first)
-        //   newArr.push(result)
-        //   let newStr = ''
-        //   let count = 0
-        //   for(let i=0,len=arr[a].length;i<len;i++)
-        //   {
-        //       newStr += arr[a][i]
-        //       if(arr[a][i] == '{')
-        //       {
-        //           count += 1
-        //       }
-        //       if(arr[a][i]=='}')
-        //       {
-        //         count -= 1
-        //         if(count == 0 )
-        //         {
-        //           break // 匹配到最外的括号退出循环
-        //         }
-        //       }
-        //   }
-        //     let  reStr =  newStr
-        //     changeArr.push(reStr)
-        // }
-        //
-        // console.log(changeArr)  // 等待改变的
-        // this.setData({
-        //     changeArr,
-        //     initerrorStr:str
-        // })
-        //
-        //
-        // let allArr = []
-        // for(let i =0,len=newArr.length;i<len;i++)
-        // {
-        //     allArr.push({"error":newArr[i],"new":''})
-        // }
-        // this.setData({
-        //     error_result:allArr
-        // })
-
         var that = this;
+        let url = options.operation;
+        url = url.replace("%1","?")
+        url = url.replace("%2","=")
+        console.log(url)
         this.setData({
             width:options.width,
             height:options.height,
             imgsrc:options.src,
-            mode:options.operation,
+            mode:url,
             type:options.type
         })
-        file.inferImage(options.operation,that.data.imgsrc,options.status).then(res=>{
+        file.inferImage(this.data.mode,that.data.imgsrc,{"status":options.status}).then(res=>{
             console.log(res)
             let math = app.towxml("$"+res.latex+"$", 'markdown');
             let result = app.towxml("$= "+res.result+"$", 'markdown');
