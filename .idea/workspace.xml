@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9439294a-cbbd-4b9f-bd27-fdc9a15eb4c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/image-cropper/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/image-cropper/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/pic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pic/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,7 +32,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="99" />
+          <entry key="js" value="101" />
           <entry key="json" value="40" />
           <entry key="png" value="4" />
           <entry key="wxml" value="53" />
@@ -47,7 +44,7 @@
           <entry key="HTML" value="52" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="40" />
-          <entry key="JavaScript" value="99" />
+          <entry key="JavaScript" value="101" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Wxss" value="30" />
         </counts>
@@ -72,18 +69,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6055">
-              <caret line="174" column="71" selection-start-line="174" selection-start-column="66" selection-end-line="174" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/image-cropper/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,15 +100,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/http.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/upload.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="455">
@@ -150,11 +126,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="99" column="26" lean-forward="true" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+            <state relative-caret-position="553">
+              <caret line="96" column="10" lean-forward="true" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/towxml/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -233,7 +227,6 @@
         <option value="$PROJECT_DIR$/pages/panel/index.wxml" />
         <option value="$PROJECT_DIR$/pages/panel/index.js" />
         <option value="$PROJECT_DIR$/towxml/config.js" />
-        <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/models/math.js" />
         <option value="$PROJECT_DIR$/utils/upload.js" />
         <option value="$PROJECT_DIR$/pages/pic/index.wxml" />
@@ -241,6 +234,7 @@
         <option value="$PROJECT_DIR$/pages/result/index.js" />
         <option value="$PROJECT_DIR$/components/image-cropper/index.js" />
         <option value="$PROJECT_DIR$/pages/pic/index.js" />
+        <option value="$PROJECT_DIR$/config.js" />
       </list>
     </option>
   </component>
@@ -378,12 +372,12 @@
       <workItem from="1587541304870" duration="605000" />
       <workItem from="1587972258340" duration="12033000" />
       <workItem from="1590058562727" duration="6118000" />
-      <workItem from="1590114850248" duration="767000" />
+      <workItem from="1590114850248" duration="975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74874000" />
+    <option name="totallyTimeSpent" value="75082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -611,20 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/towxml/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/util.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -699,8 +679,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="99" column="26" lean-forward="true" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+        <state relative-caret-position="553">
+          <caret line="96" column="10" lean-forward="true" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towxml/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
