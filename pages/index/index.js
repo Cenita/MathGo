@@ -39,7 +39,11 @@ Page({
         success: (res) => {
           const tempFilePaths = res.tempFilePaths
           wx.navigateTo({
-            url: `/pages/pic/index?src=${tempFilePaths}`
+            url: `/pages/pic/index?src=${tempFilePaths}`+
+            `&width=${this.data.borderwidth}`+
+            `&height=${this.data.borderheight}`+
+            `&allwidth=${this.data.allwidth}`+
+            `&allheight=${this.data.allheight}`
           })
           console.log(tempFilePaths)
         },
@@ -52,10 +56,15 @@ Page({
       wx.chooseMessageFile({
         count: 1,
         type: 'image',
-        success(res) {
+        success:(res) =>{
           var  temp = res.tempFiles[0].path
+          console.log(temp)
           wx.navigateTo({
-            url: `/pages/pic/index?src=${temp}`
+            url: `/pages/pic/index?src=${temp}`+
+            `&width=${this.data.borderwidth}`+
+            `&height=${this.data.borderheight}`+
+            `&allwidth=${this.data.allwidth}`+
+            `&allheight=${this.data.allheight}`
           })
         }
       })

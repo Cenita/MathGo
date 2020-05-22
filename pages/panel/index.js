@@ -128,7 +128,7 @@ Page({
   //画笔
   selectPenWidthTap(e){
     const i = e.currentTarget.dataset.index
-
+    
       this.setData({
         clear:false,
         activeIndex:0,

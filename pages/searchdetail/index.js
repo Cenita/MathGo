@@ -17,12 +17,14 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
-
+    let a = decodeURIComponent(options.math)
+    let b = decodeURIComponent(options.hua)
+    let c = decodeURIComponent(options.result)
     let type = options.type
     let img  = options.img
-    let math = app.towxml("$"+options.math+"$", 'markdown');
-    let result = app.towxml("$= "+options.result+"$", 'markdown');
-    let hua = app.towxml("$= "+options.hua+"$", 'markdown');
+    let math = app.towxml("$"+a+"$", 'markdown');
+    let hua = app.towxml("$"+b+"$", 'markdown');
+    let result = app.towxml("$"+c+"$", 'markdown');
     console.log(math)
     this.setData({
       type,

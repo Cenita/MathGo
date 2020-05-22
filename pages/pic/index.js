@@ -76,7 +76,7 @@ Page({
   },
   loadimage(e){
         // 重置图片角度、缩放、位置
-    if(this.data.status == 'xiangji'){
+    if(this.data.status == 'camera'){
       this.cropper.imgReset();
     }
     wx.hideLoading();

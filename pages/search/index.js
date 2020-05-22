@@ -53,13 +53,16 @@ Page({
     const group = e.currentTarget.dataset.group
     const index = e.currentTarget.dataset.index
 
-    let data = this.data.detail[group][index]
-    let type =  data.type
-    let img  =   data.img
-    let math = data.math
-    let hua = data.hua
-    let result = data.result
-    console.log(data)
+   let  data = this.data.detail[group][index]
+   
+   let  type =  data.type
+   let  img  =   data.img
+   let  math = data.math
+   let  hua = data.hua
+   let  result = data.result
+   math = encodeURIComponent(math)
+   hua =  encodeURIComponent(hua)
+   result = encodeURIComponent(result)
     wx.navigateTo({
       url: `/pages/searchdetail/index?type=${type}&img=${img}&math=${math}&hua=${hua}&result=${result}`,
     })
