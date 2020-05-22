@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9439294a-cbbd-4b9f-bd27-fdc9a15eb4c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/image-cropper/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/image-cropper/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/pic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pic/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/result/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/result/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,13 +23,14 @@
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,7 +54,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="5611" />
+          <entry key="js" value="5850" />
           <entry key="json" value="100" />
           <entry key="wxml" value="2097" />
           <entry key="wxss" value="966" />
@@ -61,7 +64,7 @@
         <counts>
           <entry key="HTML" value="2097" />
           <entry key="JSON" value="100" />
-          <entry key="JavaScript" value="5611" />
+          <entry key="JavaScript" value="5850" />
           <entry key="Wxss" value="966" />
         </counts>
       </usages-collector>
@@ -72,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/panel/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
+            <state relative-caret-position="6055">
               <caret line="174" column="71" selection-start-line="174" selection-start-column="66" selection-end-line="174" selection-end-column="71" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
@@ -84,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/image-cropper/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="903" column="19" lean-forward="true" selection-start-line="903" selection-start-column="19" selection-end-line="903" selection-end-column="19" />
+            <state relative-caret-position="515">
+              <caret line="907" column="36" selection-start-line="907" selection-start-column="36" selection-end-line="907" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -99,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/result/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+            <state relative-caret-position="1330">
+              <caret line="104" column="26" lean-forward="true" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
               <folding>
                 <element signature="e#25#74#0" expanded="true" />
               </folding>
@@ -114,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/http.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
+            <state relative-caret-position="770">
               <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
@@ -123,7 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="455">
               <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
             </state>
           </provider>
@@ -132,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/math.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
+            <state relative-caret-position="490">
               <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
             </state>
           </provider>
@@ -147,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="658">
-              <caret line="93" column="28" lean-forward="true" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
+              <caret line="99" column="26" lean-forward="true" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -159,7 +162,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/pic/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
+            <state relative-caret-position="420">
               <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
@@ -194,11 +197,11 @@
       <find>model</find>
       <find>modelList</find>
       <find>options</find>
-      <find>operation</find>
       <find>type</find>
       <find>console</find>
       <find>=</find>
       <find>&quot;=</find>
+      <find>operation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -234,10 +237,10 @@
         <option value="$PROJECT_DIR$/models/math.js" />
         <option value="$PROJECT_DIR$/utils/upload.js" />
         <option value="$PROJECT_DIR$/pages/pic/index.wxml" />
-        <option value="$PROJECT_DIR$/components/image-cropper/index.js" />
         <option value="$PROJECT_DIR$/components/image-cropper/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/pic/index.js" />
         <option value="$PROJECT_DIR$/pages/result/index.js" />
+        <option value="$PROJECT_DIR$/components/image-cropper/index.js" />
+        <option value="$PROJECT_DIR$/pages/pic/index.js" />
       </list>
     </option>
   </component>
@@ -255,7 +258,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="564" />
     <option name="y" value="-8" />
     <option name="width" value="1095" />
@@ -266,7 +269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -327,6 +329,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,11 +378,12 @@
       <workItem from="1587541304870" duration="605000" />
       <workItem from="1587972258340" duration="12033000" />
       <workItem from="1590058562727" duration="6118000" />
+      <workItem from="1590114850248" duration="767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74107000" />
+    <option name="totallyTimeSpent" value="74874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -583,18 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#view#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#van-icon#0;n#span#1;n#view#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#van-icon#1;n#span#1;n#view#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#1;n#view#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#van-icon#2;n#span#1;n#view#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#van-icon#3;n#span#1;n#view#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#view#0;n#view#0;n#view#2;n#view#1;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,16 +628,9 @@
     <entry file="file://$PROJECT_DIR$/utils/util.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/panel/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
+        <state relative-caret-position="6055">
           <caret line="174" column="71" selection-start-line="174" selection-start-column="66" selection-end-line="174" selection-end-column="71" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
@@ -653,24 +638,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/pic/index.wxml">
+    <entry file="file://$PROJECT_DIR$/utils/http.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="770">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/image-cropper/index.js">
+    <entry file="file://$PROJECT_DIR$/utils/upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="903" column="19" lean-forward="true" selection-start-line="903" selection-start-column="19" selection-end-line="903" selection-end-column="19" />
+        <state relative-caret-position="455">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/image-cropper/index.wxml">
+    <entry file="file://$PROJECT_DIR$/models/math.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="25" column="98" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="98" />
+        <state relative-caret-position="490">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -681,34 +666,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/math.js">
+    <entry file="file://$PROJECT_DIR$/pages/pic/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="420">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/upload.js">
+    <entry file="file://$PROJECT_DIR$/pages/result/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="1330">
+          <caret line="104" column="26" lean-forward="true" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+          <folding>
+            <element signature="e#25#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/image-cropper/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="25" column="98" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/image-cropper/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="907" column="36" selection-start-line="907" selection-start-column="36" selection-end-line="907" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/pic/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="658">
-          <caret line="93" column="28" lean-forward="true" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/result/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
-          <folding>
-            <element signature="e#25#74#0" expanded="true" />
-          </folding>
+          <caret line="99" column="26" lean-forward="true" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
         </state>
       </provider>
     </entry>

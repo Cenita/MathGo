@@ -896,11 +896,19 @@ Component({
               quality: this.data.quality,
               canvasId: this.data.el,
               success: (res) => {
+                  let name;
+                  for(let i=0;i<this.data.modeList.length;i++){
+                      let item=this.data.modeList[i];
+                      if(item.url===this.data.operation){
+                          name=item.name;
+                      }
+                  }
                 this.triggerEvent('tapcut', {
                   url: res.tempFilePath,
                   width: this.data.width * this.data.export_scale,
                   height: this.data.height * this.data.export_scale,
-                    operation:this.data.operation
+                  operation:this.data.operation,
+                    name:name
                 });
               }
             }, this)

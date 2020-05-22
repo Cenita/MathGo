@@ -91,7 +91,7 @@ Page({
       var tempImagePaths = e.detail.url
       let status = this.data.status
       // let types = e.detail.name;
-      let types   =  "四则运算";
+      let types   =  e.detail.name;
         wx.navigateTo({
             url: `/pages/result/index?operation=${url}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`
         })
