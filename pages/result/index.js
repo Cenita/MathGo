@@ -89,8 +89,8 @@ Page({
     onLoad: function (options) {
         var that = this;
         let url = options.operation;
-        url = url.replace("%1","?")
-        url = url.replace("%2","=")
+        url = url.replace("wenhao","?")
+        url = url.replace("denghao","=")
         console.log(url)
         this.setData({
             width:options.width,

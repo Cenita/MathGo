@@ -86,14 +86,16 @@ Page({
       //     "url":e.detail.operation
       // });
       let url = e.detail.operation;
-      url = url.replace("?","%1")
-      url = url.replace("=","%2")
+      url = url.replace("?","wenhao")
+      url = url.replace("=","denghao")
       var tempImagePaths = e.detail.url
       let status = this.data.status
       // let types = e.detail.name;
       let types   =  e.detail.name;
+    console.log(url, tempImagePaths, e.detail.width, e.detail.height, types, status)
         wx.navigateTo({
-            url: `/pages/result/index?operation=${url}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`
+           //url: `/pages/result/index`,
+             url: `/pages/result/index?operation=${url}&src=${tempImagePaths}&width=${e.detail.width}&height=${e.detail.height}&type=${types}&status=${status}`
         })
   },
     returnToCamera(e){
